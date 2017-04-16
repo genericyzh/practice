@@ -3,6 +3,7 @@
 /.classpath
 /.project
 /.idea
+/logs
 *.iml
 # maven ignore
 target/
@@ -20,7 +21,6 @@ target/
 # idea ignore
 .idea/
 *.ipr
-*.iml
 *.iws
 
 # temp ignore
@@ -34,5 +34,3 @@ target/
 .DS_Store
 Thumbs.db
 
-#svn
-.svn
