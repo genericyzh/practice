@@ -6,13 +6,29 @@ import java.util.stream.Collectors;
 
 /**
  * Find the Kth element of a list.
+ * 查询第k个元素
  */
 public class P03 {
 
+    /**
+     * 传统做法，效率不一定高
+     * @param list
+     * @param k
+     * @param <T>
+     * @return
+     */
     public static <T> T kth(final List<T> list, final int k) {
         return list.get(k);
     }
 
+    /**
+     * 递归做法，效率也不高
+     * 递归k次，就可以得到第k个
+     * @param list
+     * @param k
+     * @param <T>
+     * @return
+     */
     public static <T> T kthRecursive(final LinkedList<T> list, final int k) {
         if (k == 0) {
             return list.getFirst();
