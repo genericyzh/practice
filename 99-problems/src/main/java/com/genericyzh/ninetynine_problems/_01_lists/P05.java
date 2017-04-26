@@ -8,9 +8,25 @@ import static java.util.stream.Collectors.toList;
 
 /**
  * Reverse a list
+ * 翻转一个List
  */
 public class P05 {
 
+//    public static <T> List<T> reverse(List<T> list) {
+//        if (list == null) {
+//            throw new IllegalArgumentException("list can't be null");
+//        }
+//        Collections.reverse(list);
+//        return list;
+//    }
+
+    /**
+     * 使用Collections.reverse
+     *
+     * @param list
+     * @param <T>
+     * @return
+     */
     public static <T> List<T> reverse(List<T> list) {
         if (list == null) {
             throw new IllegalArgumentException("list can't be null");
