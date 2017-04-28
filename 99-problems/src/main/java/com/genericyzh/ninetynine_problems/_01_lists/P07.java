@@ -8,12 +8,14 @@ import static java.util.stream.Collectors.toList;
 
 /**
  * <b>(**) Flatten a nested list structure</b>
+ * 将一个可能内嵌List的List的List 'flat'
  * <p>
  * Transform a list, possibly holding lists as elements into a 'flat' list by replacing each list with its elements (recursively).
  * </p>
  */
 public class P07 {
 
+    // 貌似不用elementType参数也可以
     public static <T> List<T> flatten(List<?> list, Class<T> elementType) {
         List<T> flatten = new ArrayList<>();
         list.forEach(e -> {

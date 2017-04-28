@@ -14,6 +14,11 @@ import static org.junit.Assert.assertTrue;
 public class P07Test {
 
     @Test
+    public void testAsList() {
+        asList("b", asList("c", "d"));
+    }
+
+    @Test
     public void shouldFlattenAListOfList() throws Exception {
         List<String> flatten = P07.flatten(asList("a", asList("b", asList("c", "d")), "e"), String.class);
         assertThat(flatten, hasSize(5));
