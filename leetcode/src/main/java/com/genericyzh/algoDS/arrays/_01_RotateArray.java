@@ -14,6 +14,8 @@ public class _01_RotateArray {
      * 方法一：先整体翻转，再将两部分各自翻转即可；
      * 注意；翻转再翻转之后，那么原来的下标位置也是顺序的，e.g.  1,2,3,4,5,6,7 -> 7,6,5,4,3,2,1;从第三位翻：5,6,7,1,2,3,4,从第五位翻：3,4,5,4,7,1,2
      * 【1,2,3这些数字的意思是下标位置】
+     * 因为移动的位置为0~length，如果是0的话不移动；
+     * 其他情况：翻转再翻转即可恢复下标顺序
      *
      * @param nums
      * @param k
@@ -75,11 +77,11 @@ public class _01_RotateArray {
         String Str3 = new String("runoob");
         boolean retVal;
 
-        retVal = Str1.equals( Str2 );
-        System.out.println("返回值 = " + retVal );
+        retVal = Str1.equals(Str2);
+        System.out.println("返回值 = " + retVal);
 
-        retVal = Str1.equals( Str3 );
-        System.out.println("返回值 = " + retVal );
+        retVal = Str1.equals(Str3);
+        System.out.println("返回值 = " + retVal);
     }
 
 }

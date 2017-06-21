@@ -1,4 +1,4 @@
-package com.genericyzh.algoDS.arrays;
+package com.genericyzh;
 
 import org.junit.Test;
 
@@ -8,7 +8,7 @@ import static com.genericyzh.algoDS.arrays._01_RotateArray.rotate;
 import static com.genericyzh.algoDS.arrays._01_RotateArray.rotate2;
 
 /**
- * @author 大数据事业部-产品部-姚梓焕
+ * @author genericyzh
  * @version 1.0
  * @date 2017/5/6 0:22
  */
