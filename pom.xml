@@ -9,7 +9,7 @@
     <url>https://github.com/genericyzh/practice</url>
 
     <modules>
-        <module>practice</module>
+        <module>99-problems</module>
         <module>leetcode</module>
     </modules>
 
