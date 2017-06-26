@@ -19,7 +19,7 @@ public class _06_FindAllDuplicatesinanArray {
             if (nums[index] < 0) {
                 res.add(Math.abs(nums[i]));
             }
-            nums[index] = -nums[index];
+            nums[index] = -nums[index]; // 把对应的数字变为相反数，用来判断是否出现第二次
         }
         return res;
     }
