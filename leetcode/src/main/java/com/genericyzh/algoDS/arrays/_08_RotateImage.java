@@ -9,6 +9,7 @@ package com.genericyzh.algoDS.arrays;
  * 1  2  3                 7  2  1                  7  4  1
  * 4  5  6        -->      4  5  6　　       -->  　 8  5  2
  * 7  8  9                 9  8  3　　        　　　 9  6  3
+ * 即从最外层开始循环，一直到最内层
  *
  * @author genericyzh
  * @date 2017/7/1 23:20
