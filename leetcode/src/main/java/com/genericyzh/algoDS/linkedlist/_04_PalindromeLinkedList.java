@@ -60,6 +60,43 @@ public class _04_PalindromeLinkedList {
         return b && x.val == rightStart.val;
     }
 
+    /**
+     * 解法2：使用快速指针遍历，同时慢指针遍历的时候把方向改变了；
+     * 然后再从中间到两边对比
+     *
+     * @param head
+     * @return
+     */
+    public boolean isPalindrome2(ListNode head) {
+        if (head == null || head.next == null) return true;
+
+        ListNode slow = head;
+        ListNode fast = head;
+        ListNode pre = null;
+        while (fast != null && fast.next != null) {
+            fast = fast.next.next;
+            ListNode next = slow.next;
+            slow.next = pre;
+            pre = slow;
+            slow = next;
+        }
+
+        if (fast != null) { // odd
+            fast = slow.next;
+            slow = pre;
+        } else { // even
+            fast = slow;
+            slow = pre;
+        }
+
+        while (fast != null) {
+            if (fast.val != slow.val) return false;
+            fast = fast.next;
+            slow = slow.next;
+        }
+        return true;
+    }
+
     public static void main(String[] args) {
         ListNode listNode1 = new ListNode(1);
         ListNode listNode2 = new ListNode(2);
