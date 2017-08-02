@@ -8,7 +8,7 @@ package com.genericyzh.algoDS.linkedlist;
  * @date 2017/8/2 23:06
  */
 public class _05_ReverseLinkedList {
-    public class ListNode {
+    public static class ListNode {
         int val;
         ListNode next;
 
@@ -61,10 +61,10 @@ public class _05_ReverseLinkedList {
     }
 
     public static void main(String[] args) {
-        ListNode listNode1 = new _05_ReverseLinkedList().new ListNode(1);
-        ListNode listNode2 = new _05_ReverseLinkedList().new ListNode(2);
-        ListNode listNode3 = new _05_ReverseLinkedList().new ListNode(3);
-        ListNode listNode4 = new _05_ReverseLinkedList().new ListNode(4);
+        ListNode listNode1 = new ListNode(1);
+        ListNode listNode2 = new ListNode(2);
+        ListNode listNode3 = new ListNode(3);
+        ListNode listNode4 = new ListNode(4);
         listNode1.next = listNode2;
         listNode2.next = listNode3;
         listNode3.next = listNode4;
@@ -77,7 +77,6 @@ public class _05_ReverseLinkedList {
         _05_ReverseLinkedList reverseLinkedList = new _05_ReverseLinkedList();
 //        ListNode listNode = reverseLinkedList.reverseList(listNode1);
         ListNode listNode = reverseLinkedList.reverseList2(listNode1);
-        head = listNode;
         while (listNode != null) {
             System.out.println(listNode.val);
             listNode = listNode.next;
