@@ -39,6 +39,7 @@ public class _01_LinkedList<E> {
     public boolean delete(E element) {
         Node temp = new Node(null, head);
         Node dummy = temp;
+        // 因为是delete方法，所以需要使用next来判断，不能使用temp.element作判断，如果用temp的话，就不能删除了(因为删除是操作被删除的上一个节点的next)
         while (temp.next != null) {
             if (temp.next.element.equals(element)) {
                 if (temp.next == tail) {
