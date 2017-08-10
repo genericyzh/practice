@@ -6,7 +6,7 @@ package com.genericyzh.algoDS.arrays;
  * 将一个数组向右移动k位
  * For example, with n = 7 and k = 3, the array [1,2,3,4,5,6,7] is rotated to [5,6,7,1,2,3,4].
  *
- * @author yao
+ * @author genericyzh
  * @date 2017/5/1 23:40
  */
 public class _01_RotateArray {
@@ -58,16 +58,16 @@ public class _01_RotateArray {
         k = k % nums.length;
         int count = 0;
         for (int start = 0; count < nums.length; start++) {
-            int current = start;
-            int prev = nums[start];
+            int currentIndex = start;
+            int prevVal = nums[start];
             do {
-                int next = (current + k) % nums.length;
-                int temp = nums[next];
-                nums[next] = prev;
-                prev = temp;
-                current = next;
+                int nextIndex = (currentIndex + k) % nums.length;
+                int nextVal = nums[nextIndex];
+                nums[nextIndex] = prevVal;
+                prevVal = nextVal;
+                currentIndex = nextIndex;
                 count++;
-            } while (start != current); // 有可能形成环,有环的情况下要跳出，不然会死循环
+            } while (currentIndex != start); // 有可能形成环,有环的情况下要跳出，不然会死循环
         }
     }
 
