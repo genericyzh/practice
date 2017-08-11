@@ -6,6 +6,7 @@ import java.util.Set;
 
 /**
  * https://leetcode.com/problems/contains-duplicate
+ * 给出一个数组，判断是否有重复元素
  *
  * @author genericyzh
  * @date 2017/6/21 23:32
@@ -50,7 +51,7 @@ public class _02_Contains_Duplicate {
      * @return
      */
     public static boolean containsDuplicate3(int[] nums) {
-        final Set<Integer> distinct = new HashSet<Integer>();
+        final Set<Integer> distinct = new HashSet<>();
         for (int num : nums) {
             if (distinct.contains(num)) {
                 return true;
