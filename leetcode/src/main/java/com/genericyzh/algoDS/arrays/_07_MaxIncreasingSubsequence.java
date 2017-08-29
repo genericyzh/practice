@@ -2,6 +2,7 @@ package com.genericyzh.algoDS.arrays;
 
 /**
  * https://leetcode.com/problems/longest-increasing-subsequence/#/description
+ * 给出一个未排序的数组，求出最长子序列长度
  * <p>
  * tails is an array storing the smallest tail of all increasing subsequences with length i+1 in tails[i].
  * For example, say we have nums = [4,5,6,3], then all the available increasing subsequences are:
