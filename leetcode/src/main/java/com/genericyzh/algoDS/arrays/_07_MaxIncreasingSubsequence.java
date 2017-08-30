@@ -33,8 +33,9 @@ public class _07_MaxIncreasingSubsequence {
                 else
                     j = m; // m = (i + j) / 2 这种写法j跟m是不相等的，在i==j之前，j都会大于m，所以不会死循环;如果是==的话，不会增长size
             }
-            tails[i] = x;
-            if (i == size) ++size;
+            tails[i] = x; // 总是会有新的值把旧的值覆盖掉，没走一步，tails都会得到优化,可以理解为"贪心"
+            if (i == size)
+                ++size; // size未赋值，找到了长度能加1就写进去（上面的tails[i]相当于tails[size]）
         }
         return size;
     }
@@ -89,9 +90,11 @@ public class _07_MaxIncreasingSubsequence {
 
     public static void main(String[] args) {
         _07_MaxIncreasingSubsequence maxIncreasingSubsequence = new _07_MaxIncreasingSubsequence();
-        int[] a = {};
+//        int[] a = {};
 //        int[] a = {-3, -2, -1, 1, 2};
 //        int[] a = {3, 3, 3, 3, 3};
-        System.out.println(maxIncreasingSubsequence.lengthOfLIS2(a));
+//        int[] a = {10, 9, 2, 5, 3, 7, 101, 18};
+        int[] a = {1, 2, 11, 12, 13, 3, 4, 5, 6, 7};
+        System.out.println(maxIncreasingSubsequence.lengthOfLIS(a));
     }
 }
