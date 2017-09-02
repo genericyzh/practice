@@ -75,4 +75,35 @@ public class _05_PostOrderTraversalTree {
         }
         return result;
     }
+
+    /**
+     * 解法3，因为要返回的是【左右根】，我们可以用发现先序遍历的时候可以做到【根右左】，所以再把它reverse一下就得到答案了
+     *
+     * @param root
+     * @return
+     */
+    public List<Integer> postorderTraversal3(TreeNode root) {
+        List<Integer> result = new LinkedList<>();
+        if (root == null) {
+            return result;
+        }
+
+        Deque<TreeNode> stack = new ArrayDeque<>();
+        stack.offerLast(root);
+
+        while (!stack.isEmpty()) {
+            TreeNode treeNode = stack.pollLast();
+            result.add(treeNode.val);
+
+            if (treeNode.left != null) {
+                stack.offerLast(treeNode.left);
+            }
+            if (treeNode.right != null) {
+                stack.offerLast(treeNode.right);
+            }
+        }
+        Collections.reverse(result);
+        return result;
+    }
+
 }
