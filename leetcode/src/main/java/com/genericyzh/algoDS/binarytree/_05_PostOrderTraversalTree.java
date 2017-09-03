@@ -77,12 +77,53 @@ public class _05_PostOrderTraversalTree {
     }
 
     /**
-     * 解法3，因为要返回的是【左右根】，我们可以用发现先序遍历的时候可以做到【根右左】，所以再把它reverse一下就得到答案了
+     * 非递归的另一种写法
+     * https://www.kancloud.cn/kancloud/data-structure-and-algorithm-notes/73027
      *
      * @param root
      * @return
      */
     public List<Integer> postorderTraversal3(TreeNode root) {
+        List<Integer> result = new ArrayList<Integer>();
+        if (root == null) return result;
+
+        Stack<TreeNode> s = new Stack<>();
+        s.push(root);
+        TreeNode prev = null;
+        while (!s.empty()) {
+            TreeNode curr = s.peek();
+            boolean noChild = false;
+            if (curr.left == null && curr.right == null) {
+                noChild = true;
+            }
+            boolean childVisited = false;
+            // 不能分清左右节点，所以用 ||
+            if (prev != null && (curr.left == prev || curr.right == prev)) {
+                childVisited = true;
+            }
+
+            // traverse
+            if (noChild || childVisited) {
+                result.add(curr.val);
+                s.pop();
+                prev = curr;
+            } else {
+                if (curr.right != null) s.push(curr.right);
+                if (curr.left != null) s.push(curr.left);
+            }
+
+        }
+
+        return result;
+    }
+
+    /**
+     * 解法3，因为要返回的是【左右根】，我们可以用发现先序遍历的时候可以做到【根右左】，所以再把它reverse一下就得到答案了
+     *
+     * @param root
+     * @return
+     */
+    public List<Integer> postorderTraversal44(TreeNode root) {
         List<Integer> result = new LinkedList<>();
         if (root == null) {
             return result;
