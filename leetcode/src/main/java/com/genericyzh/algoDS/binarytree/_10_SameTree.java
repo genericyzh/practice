@@ -9,17 +9,6 @@ package com.genericyzh.algoDS.binarytree;
  */
 public class _10_SameTree {
 
-    public static class TreeNode {
-        int val;
-        TreeNode left;
-        TreeNode right;
-
-        TreeNode(int x) {
-            val = x;
-        }
-    }
-
-
     /**
      * 自己写的
      *

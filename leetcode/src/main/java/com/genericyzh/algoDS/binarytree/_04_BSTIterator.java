@@ -24,16 +24,6 @@ public class _04_BSTIterator {
     Deque<TreeNode> stack;
     TreeNode cur;
 
-    public static class TreeNode {
-        int val;
-        TreeNode left;
-        TreeNode right;
-
-        TreeNode(int x) {
-            val = x;
-        }
-    }
-
     public _04_BSTIterator(TreeNode root) {
         stack = new ArrayDeque<>();
         cur = root;

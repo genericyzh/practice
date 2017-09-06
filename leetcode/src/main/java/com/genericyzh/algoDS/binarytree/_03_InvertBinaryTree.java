@@ -12,16 +12,6 @@ import java.util.Queue;
  */
 public class _03_InvertBinaryTree {
 
-    public static class TreeNode {
-        int val;
-        TreeNode left;
-        TreeNode right;
-
-        TreeNode(int x) {
-            val = x;
-        }
-    }
-
     /**
      * 深搜
      *

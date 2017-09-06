@@ -11,16 +11,6 @@ import java.util.*;
  */
 public class _05_PostOrderTraversalTree {
 
-    public static class TreeNode {
-        int val;
-        TreeNode left;
-        TreeNode right;
-
-        TreeNode(int x) {
-            val = x;
-        }
-    }
-
     /**
      * 简单的递归写法
      *

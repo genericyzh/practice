@@ -8,15 +8,6 @@ package com.genericyzh.algoDS.binarytree;
  * @date 2017/9/3 22:07
  */
 public class _07_FlattenBinaryTreetoLinkedList {
-    public static class TreeNode {
-        int val;
-        TreeNode left;
-        TreeNode right;
-
-        TreeNode(int x) {
-            val = x;
-        }
-    }
 
     /**
      * 解法1：

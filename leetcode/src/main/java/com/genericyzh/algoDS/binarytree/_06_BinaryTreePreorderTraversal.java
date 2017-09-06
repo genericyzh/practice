@@ -13,15 +13,6 @@ import java.util.List;
  * @date 2017/9/2 23:09
  */
 public class _06_BinaryTreePreorderTraversal {
-    public static class TreeNode {
-        int val;
-        TreeNode left;
-        TreeNode right;
-
-        TreeNode(int x) {
-            val = x;
-        }
-    }
 
     /**
      * 递归写法

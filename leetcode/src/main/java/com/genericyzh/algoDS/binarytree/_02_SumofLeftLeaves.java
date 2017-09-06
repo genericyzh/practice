@@ -13,16 +13,6 @@ import java.util.Stack;
  */
 public class _02_SumofLeftLeaves {
 
-    public static class TreeNode {
-        int val;
-        TreeNode left;
-        TreeNode right;
-
-        TreeNode(int x) {
-            val = x;
-        }
-    }
-
     /**
      * 解法一，深搜(递归)
      *
