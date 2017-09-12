@@ -48,8 +48,53 @@ public class _10_FindMinimuminRotatedSortedArray {
         return nums[l];
     }
 
+    /**
+     * 解法2，参考剑指offer面试题8：旋转数组的最小数字
+     * indexL总是在左边，indexR总是在右边；
+     * 注意特殊情况：没选转过的时候，int result = 0跟while(nums[indexL] >= nums[indexR])可以解决
+     * minInOrder处理了存在重复的数字的情况
+     *
+     * @param nums
+     * @return
+     */
+    public int findMin2(int[] nums) {
+        if (nums == null || nums.length == 0) {
+            return 0;
+        }
+        int indexL = 0;
+        int indexR = nums.length - 1;
+        int result = 0;
+        while (nums[indexL] >= nums[indexR]) {
+            if (indexR - indexL == 1) {
+                result = indexR;
+                break;
+            }
+            int indexMid = (indexL + indexR) / 2;
+            if (nums[indexL] == nums[indexR] && nums[indexL] == nums[indexMid]) {
+                return minInOrder(nums, indexL, indexR);
+            }
+
+            if (nums[indexMid] >= nums[indexL]) {
+                indexL = indexMid;
+            } else {
+                indexR = indexMid;
+            }
+        }
+        return nums[result];
+    }
+
+    private int minInOrder(int[] nums, int indexL, int indexR) {
+        int result = nums[indexL];
+        for (int i = indexL + 1; i <= indexR; i++) {
+            if (result > nums[i]) {
+                result = nums[i];
+            }
+        }
+        return result;
+    }
+
     public static void main(String[] args) {
-        System.out.println(new _10_FindMinimuminRotatedSortedArray().findMin(
+        System.out.println(new _10_FindMinimuminRotatedSortedArray().findMin2(
                 //new int[]{6,7,1,2,3,4,5}
                 new int[]{4, 5, 6, 7, 0, 1, 2}
                 //new int[]{3,4,5,6,7,1,2}
