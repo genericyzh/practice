@@ -42,7 +42,7 @@ public class _04_PalindromeLinkedList {
             temp = temp.next;
         }
 
-        int start = (size - 1) / 2 + 1;
+        int start = (size - 1) / 2 + 1; // size：元素个数，要得到中间下标：(size - 1)/2，要再得到中间靠右，所以+1
         for (int i = 0; i < start; i++) {
             rightStart = rightStart.next;
         }
