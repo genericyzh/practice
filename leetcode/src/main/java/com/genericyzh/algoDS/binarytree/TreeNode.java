@@ -1,5 +1,8 @@
 package com.genericyzh.algoDS.binarytree;
 
+import java.util.ArrayDeque;
+import java.util.Deque;
+
 /**
  * TreeNode类包含构造树的方法
  *
@@ -36,7 +39,10 @@ public class TreeNode {
         return arr;
     }
 
-    //    String str = "[3,9,20,null,null,15,7]";
+    /**
+     * 不是一个正确的构造方法，只支持都有节点的树，例外：[1,1,2,1,null,2,null,null,null,null,2]，会构造出错误的树
+     * String str = "[3,9,20,null,null,15,7]";
+     */
     public static TreeNode mkTree(String str) {
 
         int[] arr = StrToIntArray(str);
@@ -58,4 +64,40 @@ public class TreeNode {
         }
         return nodes[1];
     }
+
+    public static TreeNode mkTree2(String str) {
+        int[] arr = StrToIntArray(str);
+        TreeNode root = new TreeNode(arr[0]);
+        if (arr.length <= 1) {
+            return root;
+        }
+        TreeNode temp;
+        Deque<TreeNode> queue = new ArrayDeque<>();
+        queue.offer(root);
+        int j = 1;
+        while (!queue.isEmpty()) {
+            temp = queue.pollFirst();
+            if (arr[j] != Integer.MAX_VALUE) {
+                TreeNode leftNode = new TreeNode(arr[j]);
+                temp.left = leftNode;
+                queue.offerLast(leftNode);
+            }
+            j++;
+            if (j >= arr.length) {
+                return root;
+            }
+            if (arr[j] != Integer.MAX_VALUE) {
+                TreeNode rightNode = new TreeNode(arr[j]);
+                temp.right = rightNode;
+                queue.offerLast(rightNode);
+            }
+            j++;
+            if (j >= arr.length) {
+                return root;
+            }
+        }
+
+        return root;
+    }
 }
+
