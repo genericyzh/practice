@@ -43,7 +43,8 @@ public class _23_FindModeinBST {
         if (curCount > maxCount) {
             maxCount = curCount;
             modeCount = 1;
-        } else if (curCount == maxCount) { // 第一次遍历是到不了这个条件的
+        } else if (curCount == maxCount) {
+            // 第一次遍历时，modes为null
             if (modes != null) {
                 modes[modeCount] = value;
             }
