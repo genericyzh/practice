@@ -41,6 +41,7 @@ public class TreeNode {
 
     /**
      * 不是一个正确的构造方法，只支持都有节点的树，例外：[1,1,2,1,null,2,null,null,null,null,2]，会构造出错误的树
+     * [1,1,2,1,null,2,null,null,null,null,2,null,null]才可以
      * String str = "[3,9,20,null,null,15,7]";
      */
     public static TreeNode mkTree(String str) {
