@@ -31,6 +31,9 @@ public class _06_IntersectionofTwoLinkedLists {
 
     /**
      * 解法1：简单暴力...
+     * 1、先要知道两个链表的长度
+     * 2、以短的链表为首，长的先"跳到"跟短的一样长先
+     * 3、一一对比
      *
      * @param headA
      * @param headB
