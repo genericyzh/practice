@@ -1,7 +1,7 @@
 package com.genericyzh.algoDS.linkedlist;
 
 /**
- * @author 大数据事业部-产品部-姚梓焕
+ * @author genericyzh
  * @date 2017/9/10 23:41
  */
 

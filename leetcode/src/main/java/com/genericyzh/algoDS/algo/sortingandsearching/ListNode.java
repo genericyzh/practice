@@ -1,4 +1,4 @@
-package com.genericyzh.algoDS.binarytree;
+package com.genericyzh.algoDS.algo.sortingandsearching;
 
 /**
  * @author genericyzh

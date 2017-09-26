@@ -36,4 +36,57 @@ public class _02_InsertSort {
         }
     }
 
+    public ListNode insertionSortList(ListNode head) {
+        if (head == null) {
+            return head;
+        }
+
+        ListNode helper = new ListNode(0); //new starter of the sorted list
+        ListNode cur = head; //the node will be inserted
+        ListNode pre = helper; //insert node between pre and pre.next
+        ListNode next = null; //the next node will be inserted
+        //not the end of input list
+        while (cur != null) {
+            next = cur.next;
+            //find the right place to insert
+            while (pre.next != null && pre.next.val < cur.val) {
+                pre = pre.next;
+            }
+            //insert between pre and pre.next
+            cur.next = pre.next; // 第一次pre.next = null，所以第一次cur.next = null，断开了
+            pre.next = cur;
+            pre = helper;
+            cur = next;
+        }
+
+        return helper.next;
+    }
+
+    public static void main(String[] args) {
+//        ListNode listNode4 = new ListNode(4);
+//        ListNode listNode5 = new ListNode(5);
+//        ListNode listNode6 = new ListNode(6);
+//        ListNode listNode3 = new ListNode(3);
+//        ListNode listNode1 = new ListNode(1);
+//
+//        listNode4.next = listNode5;
+//        listNode5.next = listNode6;
+//        listNode6.next = listNode3;
+//        listNode3.next = listNode1;
+
+        ListNode listNode3 = new ListNode(3);
+        ListNode listNode1 = new ListNode(1);
+
+        listNode3.next = listNode1;
+
+        _02_InsertSort insertSort = new _02_InsertSort();
+        ListNode listNode = insertSort.insertionSortList(listNode3);
+        while (listNode != null) {
+            System.out.printf("%s\t", listNode.val);
+            listNode = listNode.next;
+        }
+        System.out.println();
+
+    }
+
 }
