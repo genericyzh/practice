@@ -34,33 +34,47 @@ public class _06_QuickSort {
     private static void swap(int[] a, int i, int j) {
         int temp = a[i];
         a[i] = a[j];
-        a[j] = a[i];
+        a[j] = temp;
+    }
+
+    public static void sort2(int[] a) {
+        quickSort2(a, 0, a.length - 1);
     }
 
     /**
      * 优化交换次数
-     *
-     * @param arr
-     * @param start
-     * @param end
      */
-    private void quick_sort_recursive(int[] arr, int start, int end) {
-        if (start >= end)
-            return;
-        int mid = arr[end];
-        int left = start, right = end - 1;
-        while (left < right) {
-            while (arr[left] <= mid && left < right)
+    public static void quickSort2(int[] arr, int start, int end) {
+        if (start >= end) return;
+        int pivot = arr[start];
+        int left = start + 1;
+        int right = end;
+        while (left <= right) {
+            while (left <= right && arr[left] < pivot) {
                 left++;
-            while (arr[right] >= mid && left < right)
+            }
+            while (left <= right && arr[right] >= pivot) {
                 right--;
-            swap(arr, left, right);
+            }
+            if (left > right) break;
+            // swap array[left] with array[right] while left <= right
+            swap(arr, start, end);
         }
-        if (arr[left] >= arr[end])
-            swap(arr, left, end);
-        else
-            left++;    //此处我认为有误
-        quick_sort_recursive(arr, start, left - 1);
-        quick_sort_recursive(arr, left + 1, end);
+        /* swap the smaller with pivot */
+        swap(arr, pivot, right);
+
+        quickSort2(arr, start, right - 1);
+        quickSort2(arr, right + 1, end);
+    }
+
+    public static void main(String[] args) {
+        int unsortedArray[] = new int[]{6, 5, 3, 1, 8, 7, 2, 4};
+        sort2(unsortedArray);
+//        sort(unsortedArray);
+        System.out.println("After sort: ");
+        for (int item : unsortedArray) {
+            System.out.print(item + " ");
+        }
+        System.out.println();
     }
 }
