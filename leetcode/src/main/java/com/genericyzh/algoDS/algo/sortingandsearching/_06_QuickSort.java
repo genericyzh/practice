@@ -10,11 +10,12 @@ public class _06_QuickSort {
     }
 
     public static void sort(int[] a, int lo, int hi) {
-        int mid = (lo + hi) / 2;
+        if (lo >= hi) return;
 
-        partition(a, lo, hi);
-        sort(a, lo, mid);
-        sort(a, mid + 1, hi);
+        int pivot = partition(a, lo, hi);
+        sort(a, lo, pivot - 1);
+        sort(a, pivot + 1, hi);
+
     }
 
     private static int partition(int[] a, int lo, int hi) {
@@ -46,7 +47,7 @@ public class _06_QuickSort {
      */
     public static void quickSort2(int[] arr, int start, int end) {
         if (start >= end) return;
-        int pivot = arr[start];
+        int pivot = arr[start]; // 最好的pivot是取中值，现在这种取法非常不科学
         int left = start + 1;
         int right = end;
         while (left <= right) {
@@ -69,8 +70,9 @@ public class _06_QuickSort {
 
     public static void main(String[] args) {
         int unsortedArray[] = new int[]{6, 5, 3, 1, 8, 7, 2, 4};
-        sort2(unsortedArray);
-//        sort(unsortedArray);
+        int unsortedArray2[] = new int[]{4, 4, 3, 3, 8, 8, 2, 2, 6, 6, 1, 1, 7, 7, 5};
+//        sort2(unsortedArray);
+        sort(unsortedArray2);
         System.out.println("After sort: ");
         for (int item : unsortedArray) {
             System.out.print(item + " ");
