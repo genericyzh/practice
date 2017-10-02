@@ -48,31 +48,31 @@ public class _06_QuickSort {
     public static void quickSort2(int[] arr, int start, int end) {
         if (start >= end) return;
         int pivot = arr[start]; // 最好的pivot是取中值，现在这种取法非常不科学
-        int left = start + 1;
-        int right = end;
-        while (left <= right) {
-            while (left <= right && arr[left] < pivot) {
-                left++;
+        int i = start + 1, j = end;
+        for (; ; ) {
+            while (arr[i] < pivot) {
+                i++;
             }
-            while (left <= right && arr[right] >= pivot) {
-                right--;
+            while (arr[j] > pivot) {
+                j--;
             }
-            if (left > right) break;
-            // swap array[left] with array[right] while left <= right
-            swap(arr, start, end);
+            if (i < j)
+                swap(arr, i, j);
+            else
+                break;
         }
         /* swap the smaller with pivot */
-        swap(arr, pivot, right);
+        swap(arr, start, i - 1);
 
-        quickSort2(arr, start, right - 1);
-        quickSort2(arr, right + 1, end);
+        quickSort2(arr, start, i - 1);
+        quickSort2(arr, i + 1, end);
     }
 
     public static void main(String[] args) {
-        int unsortedArray[] = new int[]{6, 5, 3, 1, 8, 7, 2, 4};
-        int unsortedArray2[] = new int[]{4, 4, 3, 3, 8, 8, 2, 2, 6, 6, 1, 1, 7, 7, 5};
-//        sort2(unsortedArray);
-        sort(unsortedArray2);
+//        int unsortedArray[] = new int[]{6, 5, 3, 1, 8, 7, 2, 4};
+        int unsortedArray[] = new int[]{4, 4, 3, 3, 8, 8, 2, 2, 6, 6, 1, 1, 7, 7, 5};
+//        sort(unsortedArray);
+        sort2(unsortedArray);
         System.out.println("After sort: ");
         for (int item : unsortedArray) {
             System.out.print(item + " ");
