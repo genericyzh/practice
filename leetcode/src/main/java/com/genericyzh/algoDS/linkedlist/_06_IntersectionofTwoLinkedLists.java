@@ -124,8 +124,11 @@ public class _06_IntersectionofTwoLinkedLists {
         ListNode listNodeB = new ListNode(4);
         listNodeB.next = listNode5;
 
+        ListNode listNodeC = new ListNode(8);
+
         _06_IntersectionofTwoLinkedLists intersectionofTwoLinkedLists = new _06_IntersectionofTwoLinkedLists();
 //        System.out.println(intersectionofTwoLinkedLists.getIntersectionNode(listNode1, listNodeB));
-        System.out.println(intersectionofTwoLinkedLists.getIntersectionNode2(listNode1, listNodeB));
+//        System.out.println(intersectionofTwoLinkedLists.getIntersectionNode2(listNode1, listNodeB));
+        System.out.println(intersectionofTwoLinkedLists.getIntersectionNode2(listNode1, listNodeC));
     }
 }
