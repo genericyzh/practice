@@ -16,21 +16,6 @@ package com.genericyzh.algoDS.linkedlist;
  * @date 2017/8/8 23:49
  */
 public class _07_LinkedListCycle {
-    public static class ListNode {
-        int val;
-        ListNode next;
-
-        ListNode(int x) {
-            val = x;
-        }
-
-        @Override
-        public String toString() {
-            return "ListNode{" +
-                    "val=" + val +
-                    '}';
-        }
-    }
 
     public boolean hasCycle(ListNode head) {
         if (head == null || head.next == null) {
