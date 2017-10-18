@@ -14,22 +14,6 @@ public class _08_RemoveNthNodeFromEndofList {
      */
     private int n;
 
-    public static class ListNode {
-        int val;
-        ListNode next;
-
-        ListNode(int x) {
-            val = x;
-        }
-
-        @Override
-        public String toString() {
-            return "ListNode{" +
-                    "val=" + val +
-                    '}';
-        }
-    }
-
     /**
      * 解法1：
      * 1、得到所有元素个数
@@ -71,7 +55,9 @@ public class _08_RemoveNthNodeFromEndofList {
      * @return
      */
     public ListNode removeNthFromEnd2(ListNode head, int n) {
-        if (head == null || head.next == null) return null;
+        if (head == null || head.next == null) {
+            return null;
+        }
 
         this.n = n;
         remove(head);
@@ -79,13 +65,14 @@ public class _08_RemoveNthNodeFromEndofList {
     }
 
     private void remove(ListNode x) {
-        if (x == null) return;
+        if (x == null) {
+            return;
+        }
         remove(x.next);
         if (n == 0) {
-            x.next = x.next.next; // 找到时不return，如果是head被删除的话，n=0，否则n<0 || >0；当n==size时，这里是不会被执行到的
+            x.next = x.next.next; // 找到时不return，如果是head被删除的话，n=0，否则n<0 || >0；当n==size时，即系要删除head时，这里是不会被执行到的
         }
         n--;
-
     }
 
     public static void printLinkedList(ListNode listNode) {
@@ -111,5 +98,10 @@ public class _08_RemoveNthNodeFromEndofList {
 //        ListNode head = removeNthNodeFromEndofList.removeNthFromEnd(listNode1, 5);
         ListNode head = removeNthNodeFromEndofList.removeNthFromEnd2(listNode1, 2);
         printLinkedList(head);
+
+//        ListNode listNode1 = new ListNode(1);
+//        _08_RemoveNthNodeFromEndofList removeNthNodeFromEndofList = new _08_RemoveNthNodeFromEndofList();
+//        ListNode head = removeNthNodeFromEndofList.removeNthFromEnd(listNode1, 1);
+//        printLinkedList(head);
     }
 }
