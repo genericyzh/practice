@@ -10,27 +10,14 @@ package com.genericyzh.algoDS.linkedlist;
  * @date 2017/8/16 22:32
  */
 public class _09_SortList {
-    public static class ListNode {
-        int val;
-        ListNode next;
-
-        ListNode(int x) {
-            val = x;
-        }
-
-        @Override
-        public String toString() {
-            return "ListNode{" +
-                    "val=" + val +
-                    '}';
-        }
-    }
 
     /**
      * 归并排序
      */
     public ListNode sortList(ListNode head) {
-        if (head == null || head.next == null) return head;
+        if (head == null || head.next == null) {
+            return head;
+        }
 
         ListNode slow = head;
         ListNode fast = head.next;
