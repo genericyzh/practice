@@ -7,7 +7,7 @@ package com.genericyzh.algoDS.linkedlist;
  * 参考：http://bookshadow.com/weblog/2015/07/10/leetcode-linked-list-cycle-ii/
  *
  * @author genericyzh
- * @date 2017/8/20 18:42
+ * @date 2017/8/20 18:42 2017/10/27
  */
 public class _10_LinkedListCycle2 {
     public static class ListNode {
@@ -62,11 +62,15 @@ public class _10_LinkedListCycle2 {
      * @return
      */
     public ListNode detectCycle2(ListNode head) {
-        if (head == null) return null;
+        if (head == null) {
+            return null;
+        }
         ListNode slow = head;
         ListNode fast = head.next;
         while (fast != null && fast.next != null) {
-            if (fast == slow) break;
+            if (fast == slow) {
+                break;
+            }
             slow = slow.next;
             fast = fast.next.next;
         }
@@ -78,7 +82,9 @@ public class _10_LinkedListCycle2 {
     }
 
     ListNode findLink(ListNode x, ListNode y) {
-        if (x == null || y == null) return null;
+        if (x == null || y == null) {
+            return null;
+        }
 
         ListNode xhead = x;
         ListNode yhead = y;
