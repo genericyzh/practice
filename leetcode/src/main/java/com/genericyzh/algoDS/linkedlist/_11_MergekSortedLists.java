@@ -1,7 +1,8 @@
 package com.genericyzh.algoDS.linkedlist;
 
 /**
- * 23. Merge k Sorted Lists https://leetcode.com/problems/merge-k-sorted-lists/description/
+ * 23. Merge k Sorted Lists
+ * https://leetcode.com/problems/merge-k-sorted-lists/description/
  * 给出k个已排序的链表，合并成一个
  * 参考：https://github.com/billryan/algorithm-exercise/blob/master/zh-hans/linked_list/merge_k_sorted_lists.md
  * 第二种解法如果是这种情况的话，浪费了太多的时间：
@@ -13,7 +14,7 @@ package com.genericyzh.algoDS.linkedlist;
  * 所以有了第三种解法
  *
  * @author genericyzh
- * @date 2017/8/24 0:00
+ * @date 2017/8/24 0:00 2017/10/28
  */
 public class _11_MergekSortedLists {
 
