@@ -11,38 +11,36 @@ package com.genericyzh.algoDS.linkedlist;
  * 第3个链表：10002
  * 第k个链表：10000+k
  * 每次都要跟第一个链表全部比较一次，再插到最后
- * 所以有了第三种解法
+ * <p>
+ * 所以有了第三种解法:
+ * 假设总共有k个list，每个list的最大长度是n，那么运行时间满足递推式T(k) = 2T(k/2)+O(n*k)。
+ * 根据主定理，可以算出算法的总复杂度是O(nklogk)。
+ * 如果不了解主定理的朋友，可以参见主定理-维基百科。空间复杂度的话是递归栈的大小O(logk)。
+ *
+ * ★好题，要懂得：
+ * 1、归并排序哦的复杂度计算
+ * 2、合并操作的两种：递归、非递归实现
  *
  * @author genericyzh
- * @date 2017/8/24 0:00 2017/10/28
+ * @date 2017/8/24 0:00 2017/10/28 2017/11/08
  */
 public class _11_MergekSortedLists {
 
-    public static class ListNode {
-        int val;
-        ListNode next;
-
-        ListNode(int x) {
-            val = x;
-        }
-
-        @Override
-        public String toString() {
-            return "ListNode{" +
-                    "val=" + val +
-                    '}';
-        }
-    }
-
     public ListNode mergeKLists(ListNode[] lists) {
-        if (lists.length == 0) return null;
-        if (lists.length == 1) return lists[0];
+        if (lists.length == 0) {
+            return null;
+        }
+        if (lists.length == 1) {
+            return lists[0];
+        }
 
         return sort(lists, 0, lists.length - 1);
     }
 
     ListNode sort(ListNode[] lists, int left, int right) {
-        if (left >= right) return lists[left];
+        if (left >= right) {
+            return lists[left];
+        }
         int mid = (left + right) / 2;
         ListNode leftNode = sort(lists, left, mid);
         ListNode rightNode = sort(lists, mid + 1, right);
@@ -73,7 +71,7 @@ public class _11_MergekSortedLists {
      * @return
      */
     public ListNode merge(ListNode left, ListNode right) {
-        ListNode x = new ListNode(0);
+        ListNode x = new ListNode(0); // 非递归的方式需要帮助节点，在x的基础上修改next，而不是修改left.next/right.next
         ListNode xx = x;
         while (left != null || right != null) {
             if (left == null) {
