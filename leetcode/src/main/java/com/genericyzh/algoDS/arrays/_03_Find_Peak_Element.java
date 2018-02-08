@@ -30,7 +30,7 @@ public class _03_Find_Peak_Element {
         if (left == right) {
             return left;
         }
-        // 每次帅选都会去掉部分下标
+        // 每次筛选都会去掉部分下标
         int mid = (left + right) / 2;
         if (nums[mid] > nums[mid + 1]) {
             return binarySearch(nums, left, mid); // 右边的没了
