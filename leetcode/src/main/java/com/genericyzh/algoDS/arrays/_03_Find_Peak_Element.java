@@ -38,4 +38,30 @@ public class _03_Find_Peak_Element {
         return binarySearch(nums, mid + 1, right); // 左边的没了
         // 最后一次应该剩下2个，比如下标3跟4，mid=3；一比较就能得到3，3或者4,4，下轮递归就结束了
     }
+
+    /**
+     * 错误示范；
+     * mid = (left + right) / 2，就不要用mid跟mid - 1比较，当只剩下两个元素的时候，mid - 1就不准确了
+     * @param nums
+     * @param left
+     * @param right
+     * @return
+     */
+    private int binarySearch2(int[] nums, int left, int right) {
+        if (left == right) {
+            return left;
+        }
+        int mid = (left + right) / 2;
+        if (nums[mid - 1] > nums[mid]) {
+            return binarySearch(nums, left, mid - 1);
+        }
+        return binarySearch2(nums, mid, right);
+    }
+
+    public static void main(String[] args) {
+        _03_Find_Peak_Element find_peak_element = new _03_Find_Peak_Element();
+        int peakElement = find_peak_element.findPeakElement(new int[]{1, 2, 3, 1});
+        System.out.println(peakElement);
+    }
+
 }
