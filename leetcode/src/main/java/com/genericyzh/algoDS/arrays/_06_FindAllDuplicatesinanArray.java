@@ -16,7 +16,7 @@ public class _06_FindAllDuplicatesinanArray {
         List<Integer> res = new ArrayList<>();
         for (int i = 0; i < nums.length; i++) {
             int index = Math.abs(nums[i]) - 1;
-            if (nums[index] < 0) {
+            if (nums[index] < 0) { // < 0证明是第二次出现
                 res.add(Math.abs(nums[i]));
             }
             nums[index] = -nums[index]; // 把对应的数字变为相反数，用来判断是否出现第二次
