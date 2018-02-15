@@ -2,7 +2,7 @@ package com.genericyzh.algoDS.arrays;
 
 /**
  * https://leetcode.com/problems/longest-increasing-subsequence/#/description
- * 给出一个未排序的数组，求出最长子序列长度
+ * 给出一个未排序的数组，求出最长增长子序列(不连续)长度
  * <p>
  * tails is an array storing the smallest tail of all increasing subsequences with length i+1 in tails[i].
  * For example, say we have nums = [4,5,6,3], then all the available increasing subsequences are:
@@ -33,7 +33,7 @@ public class _07_MaxIncreasingSubsequence {
                 else
                     j = m; // m = (i + j) / 2 这种写法j跟m是不相等的，在i==j之前，j都会大于m，所以不会死循环;如果是==的话，不会增长size
             }
-            tails[i] = x; // 总是会有新的值把旧的值覆盖掉，没走一步，tails都会得到优化,可以理解为"贪心"
+            tails[i] = x; // x会在tails[]中找到合适的位置插入
             if (i == size)
                 ++size; // size未赋值，找到了长度能加1就写进去（上面的tails[i]相当于tails[size]）
         }
