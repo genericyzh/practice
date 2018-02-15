@@ -63,13 +63,15 @@ public class _10_FindMinimuminRotatedSortedArray {
         }
         int indexL = 0;
         int indexR = nums.length - 1;
-        int result = 0;
+        int result = 0; // 坑1：处理已经排好序的了
         while (nums[indexL] >= nums[indexR]) {
             if (indexR - indexL == 1) {
                 result = indexR;
                 break;
             }
             int indexMid = (indexL + indexR) / 2;
+            // 坑2：处理三个值一样大小的情况：
+            // indexL、indexMid、indexR指向的三个数字相等， 则只能顺序查找
             if (nums[indexL] == nums[indexR] && nums[indexL] == nums[indexMid]) {
                 return minInOrder(nums, indexL, indexR);
             }
