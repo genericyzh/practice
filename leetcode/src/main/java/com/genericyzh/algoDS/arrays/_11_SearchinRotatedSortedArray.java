@@ -76,6 +76,5 @@ public class _11_SearchinRotatedSortedArray {
         _11_SearchinRotatedSortedArray searchinRotatedSortedArray = new _11_SearchinRotatedSortedArray();
 //        System.out.println(searchinRotatedSortedArray.search(nums, 0));
         System.out.println(searchinRotatedSortedArray.search(nums, 1));
-        ;
     }
 }
