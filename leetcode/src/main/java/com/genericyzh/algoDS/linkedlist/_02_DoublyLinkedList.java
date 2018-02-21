@@ -54,18 +54,24 @@ public class _02_DoublyLinkedList<E> {
 
         size--;
 
-        // if found node is head of the list, need to change to next element
+        // 处理只有一个节点
+        if (size == 0) {
+            head = tail = null;
+        }
+
+        // 处理删除的是头结点
         if (temp == head) {
+            temp.next.pre = null;
             head = head.next;
             return true;
         }
 
-        // if found node is last node of the list, need to change tail
+        // 处理删除的是尾节点
         if (temp == tail) {
+            temp.pre.next = null;
             tail = temp.pre;
             return true;
         }
-
 
         // change links
         temp.pre.next = temp.next;
