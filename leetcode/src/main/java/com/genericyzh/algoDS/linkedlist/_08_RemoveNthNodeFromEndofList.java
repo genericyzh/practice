@@ -9,10 +9,6 @@ package com.genericyzh.algoDS.linkedlist;
  */
 public class _08_RemoveNthNodeFromEndofList {
 
-    /**
-     * 递归用到的字段
-     */
-    private int n;
 
     /**
      * 解法1：
@@ -45,6 +41,11 @@ public class _08_RemoveNthNodeFromEndofList {
         temp.next = temp.next.next;
         return dummy.next;
     }
+
+    /**
+     * 递归用到的字段
+     */
+    private int n;
 
     /**
      * 解法2：递归
