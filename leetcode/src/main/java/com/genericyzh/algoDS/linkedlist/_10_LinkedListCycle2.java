@@ -10,28 +10,13 @@ package com.genericyzh.algoDS.linkedlist;
  * @date 2017/8/20 18:42 2017/10/27
  */
 public class _10_LinkedListCycle2 {
-    public static class ListNode {
-        int val;
-        ListNode next;
-
-        ListNode(int x) {
-            val = x;
-        }
-
-        @Override
-        public String toString() {
-            return "ListNode{" +
-                    "val=" + val +
-                    '}';
-        }
-    }
-
 
     public ListNode detectCycle(ListNode head) {
         if (head == null || head.next == null) {
             return null;
         }
 
+        // 注意这里slow从next开始、fast从next.next开始
         ListNode slow = head.next;
         ListNode fast = head.next.next;
 
@@ -65,6 +50,9 @@ public class _10_LinkedListCycle2 {
         if (head == null) {
             return null;
         }
+        // 这样也可以
+//        ListNode slow = head.next;
+//        ListNode fast = head.next.next;
         ListNode slow = head;
         ListNode fast = head.next;
         while (fast != null && fast.next != null) {
