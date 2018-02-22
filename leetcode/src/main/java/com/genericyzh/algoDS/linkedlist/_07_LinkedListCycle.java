@@ -2,6 +2,7 @@ package com.genericyzh.algoDS.linkedlist;
 
 /**
  * https://leetcode.com/problems/linked-list-cycle/description/
+ * 题意：判断单向链表是否有环
  * 参考：https://www.kancloud.cn/kancloud/data-structure-and-algorithm-notes/73009
  * <p>
  * 对于带环链表的检测，效率较高且易于实现的一种方式为使用快慢指针。快指针每次走两步，慢指针每次走一步，
