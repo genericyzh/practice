@@ -8,17 +8,9 @@ package com.genericyzh.algoDS.linkedlist;
  * @date 2017/8/2 23:06
  */
 public class _05_ReverseLinkedList {
-    public static class ListNode {
-        int val;
-        ListNode next;
-
-        ListNode(int x) {
-            val = x;
-        }
-    }
 
     /**
-     * 非递归写法
+     * 非递归写法（修改顺序从左到右）
      *
      * @param head
      * @return
@@ -40,16 +32,20 @@ public class _05_ReverseLinkedList {
     }
 
     /**
-     * 递归写法:得到倒数第二个元素后直接操作即可，返回最后一个元素为链表头
+     * 递归写法:得到倒数第二个元素后直接操作即可，返回最后一个元素为链表头（修改顺序从右到左）
      *
      * @param head
      * @return
      */
     public ListNode reverseList2(ListNode head) {
         // case1: empty list
-        if (head == null) return head;
+        if (head == null) {
+            return head;
+        }
         // case2: only one element list
-        if (head.next == null) return head;
+        if (head.next == null) {
+            return head;
+        }
         // case3: reverse from the rest after head
         ListNode newHead = reverseList2(head.next);
         // reverse between head and head->next
