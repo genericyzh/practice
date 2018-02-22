@@ -9,23 +9,6 @@ package com.genericyzh.algoDS.linkedlist;
  * @date 2017/8/1 22:46
  */
 public class _04_PalindromeLinkedList {
-    /**
-     * Definition for singly-linked list.
-     * public class ListNode {
-     * int val;
-     * ListNode next;
-     * ListNode(int x) { val = x; }
-     * }
-     */
-
-    static class ListNode {
-        int val;
-        ListNode next;
-
-        ListNode(int x) {
-            val = x;
-        }
-    }
 
     ListNode rightStart = null;
 
