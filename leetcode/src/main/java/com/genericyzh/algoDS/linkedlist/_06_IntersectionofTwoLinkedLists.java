@@ -2,7 +2,7 @@ package com.genericyzh.algoDS.linkedlist;
 
 /**
  * https://leetcode.com/problems/intersection-of-two-linked-lists/description/
- * 给出两个单向链表头，他们有可能后面部分完全重合，找出重合的节点
+ * 给出两个单向链表，他们有可能后面部分完全重合，找出重合的节点
  * A:          a1 → a2
  * ****************** ↘
  * ****************** c1 → c2 → c3
@@ -13,21 +13,6 @@ package com.genericyzh.algoDS.linkedlist;
  * @date 2017/8/7 0:19
  */
 public class _06_IntersectionofTwoLinkedLists {
-    public static class ListNode {
-        int val;
-        ListNode next;
-
-        ListNode(int x) {
-            val = x;
-        }
-
-        @Override
-        public String toString() {
-            return "ListNode{" +
-                    "val=" + val +
-                    '}';
-        }
-    }
 
     /**
      * 解法1：简单暴力...
@@ -94,6 +79,7 @@ public class _06_IntersectionofTwoLinkedLists {
         ListNode a = headA;
         ListNode b = headB;
 
+        // 能够处理无交点的情况
         while (a != b) {
             a = a == null ? headB : a.next;
             b = b == null ? headA : b.next;
