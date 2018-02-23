@@ -18,6 +18,7 @@ public class TreeNode {
         val = x;
     }
 
+    @Override
     public String toString() {
         return Integer.toString(val);
     }
@@ -39,34 +40,7 @@ public class TreeNode {
         return arr;
     }
 
-    /**
-     * 不是一个正确的构造方法，只支持都有节点的树，例外：[1,1,2,1,null,2,null,null,null,null,2]，会构造出错误的树
-     * [1,1,2,1,null,2,null,null,null,null,2,null,null]才可以
-     * String str = "[3,9,20,null,null,15,7]";
-     */
     public static TreeNode mkTree(String str) {
-
-        int[] arr = StrToIntArray(str);
-        TreeNode[] nodes = new TreeNode[arr.length + 1];
-        for (int i = 1; i < nodes.length; i++) {
-            if (arr[i - 1] != Integer.MAX_VALUE) {
-                nodes[i] = new TreeNode(arr[i - 1]);
-            } else {
-                nodes[i] = null;
-            }
-        }
-
-        TreeNode node = null;
-        for (int i = 1; i < nodes.length / 2; i++) {
-            node = nodes[i];
-            if (node == null) continue;
-            node.left = nodes[2 * i];
-            node.right = nodes[2 * i + 1];
-        }
-        return nodes[1];
-    }
-
-    public static TreeNode mkTree2(String str) {
         int[] arr = StrToIntArray(str);
         TreeNode root = new TreeNode(arr[0]);
         if (arr.length <= 1) {
@@ -99,6 +73,33 @@ public class TreeNode {
         }
 
         return root;
+    }
+
+    /**
+     * 不是一个正确的构造方法，只支持都有节点的树，例外：[1,1,2,1,null,2,null,null,null,null,2]，会构造出错误的树
+     * [1,1,2,1,null,2,null,null,null,null,2,null,null]才可以，用_01_BinaryTreeLevelOrderTraversal测试貌似也是错误的(2018/02/23)
+     * String str = "[3,9,20,null,null,15,7]";
+     */
+    public static TreeNode mkTree2(String str) {
+
+        int[] arr = StrToIntArray(str);
+        TreeNode[] nodes = new TreeNode[arr.length + 1];
+        for (int i = 1; i < nodes.length; i++) {
+            if (arr[i - 1] != Integer.MAX_VALUE) {
+                nodes[i] = new TreeNode(arr[i - 1]);
+            } else {
+                nodes[i] = null;
+            }
+        }
+
+        TreeNode node = null;
+        for (int i = 1; i < nodes.length / 2; i++) {
+            node = nodes[i];
+            if (node == null) continue;
+            node.left = nodes[2 * i];
+            node.right = nodes[2 * i + 1];
+        }
+        return nodes[1];
     }
 }
 
