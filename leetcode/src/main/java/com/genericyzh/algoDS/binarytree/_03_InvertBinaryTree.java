@@ -19,12 +19,14 @@ public class _03_InvertBinaryTree {
      * @return
      */
     public TreeNode invertTree(TreeNode root) {
-        if (root == null)
+        if (root == null) {
             return root;
+        }
         TreeNode left = invertTree(root.left);
         TreeNode right = invertTree(root.right);
         root.left = right;
         root.right = left;
+        // 这个return啥也没干，就返回参数root
         return root;
     }
 
