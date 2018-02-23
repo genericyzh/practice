@@ -7,7 +7,7 @@ import java.util.Queue;
 
 /**
  * https://leetcode.com/problems/binary-tree-level-order-traversal/description/
- * 给出一个二叉树，依次输出每一层的节点(DFS)
+ * 给出一个二叉树，依次输出每一层的节点(BFS)
  *
  * @author genericyzh
  * @date 2017/8/28 23:37
