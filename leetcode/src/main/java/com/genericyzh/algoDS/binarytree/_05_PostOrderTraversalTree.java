@@ -18,8 +18,7 @@ public class _05_PostOrderTraversalTree {
      * @return
      */
     public List<Integer> postorderTraversal(TreeNode root) {
-//        List<Integer> result = new LinkedList<>();
-        List<Integer> result = new ArrayList<>(); // 不太明白arraylist居然还快一点
+        List<Integer> result = new ArrayList<>();
         if (root == null) {
             return result;
         }
@@ -35,7 +34,8 @@ public class _05_PostOrderTraversalTree {
     }
 
     /**
-     * 非递归写法
+     * 非递归写法:
+     * 用栈和集合辅助
      *
      * @param root
      * @return
@@ -49,18 +49,23 @@ public class _05_PostOrderTraversalTree {
         Deque<TreeNode> stack = new ArrayDeque<>();
         Set<TreeNode> set = new HashSet<>();
         stack.offer(root);
+        // 叶子节点时，peek.left == peek.right == null
         set.add(null);
 
         while (!stack.isEmpty()) {
             TreeNode peek = stack.peekLast();
+            // 当左节点和右节点都在set中，当前节点就要遍历了
             if (set.contains(peek.left) && set.contains(peek.right)) {
+                // 这里才在栈中去掉
                 result.add(stack.pollLast().val);
                 set.add(peek);
             } else {
-                if (peek.right != null)
+                if (peek.right != null) {
                     stack.offerLast(peek.right);
-                if (peek.left != null)
+                }
+                if (peek.left != null) {
                     stack.offerLast(peek.left);
+                }
             }
         }
         return result;
@@ -74,8 +79,10 @@ public class _05_PostOrderTraversalTree {
      * @return
      */
     public List<Integer> postorderTraversal3(TreeNode root) {
-        List<Integer> result = new ArrayList<Integer>();
-        if (root == null) return result;
+        List<Integer> result = new ArrayList<>();
+        if (root == null) {
+            return result;
+        }
 
         Stack<TreeNode> s = new Stack<>();
         s.push(root);
@@ -83,11 +90,16 @@ public class _05_PostOrderTraversalTree {
         while (!s.empty()) {
             TreeNode curr = s.peek();
             boolean noChild = false;
+            // 1、叶子节点
             if (curr.left == null && curr.right == null) {
                 noChild = true;
             }
             boolean childVisited = false;
-            // 不能分清左右节点，所以用 ||
+            // 2、当前节点的子节点已经访问了；
+            // 它有两个节点或者一个节点，有以下情况：
+            // ---- 1、只有左节点，则left == prev
+            // ---- 2、有两个节点，或者只有右节点，则right == prev
+            // 所以这里使用 ||
             if (prev != null && (curr.left == prev || curr.right == prev)) {
                 childVisited = true;
             }
@@ -98,8 +110,12 @@ public class _05_PostOrderTraversalTree {
                 s.pop();
                 prev = curr;
             } else {
-                if (curr.right != null) s.push(curr.right);
-                if (curr.left != null) s.push(curr.left);
+                if (curr.right != null) {
+                    s.push(curr.right);
+                }
+                if (curr.left != null) {
+                    s.push(curr.left);
+                }
             }
 
         }
