@@ -21,7 +21,7 @@ public class _07_FlattenBinaryTreetoLinkedList {
         if (root == null) {
             return;
         }
-
+        // 先左后右，那么下面就要while(root.right != null)
         flatten(root.left);
         flatten(root.right);
 
@@ -34,36 +34,43 @@ public class _07_FlattenBinaryTreetoLinkedList {
         root.right = temp;
     }
 
+    /**
+     * 辅助变量
+     */
     private TreeNode prev = null;
 
     /**
-     * 解法2，可以发现要做到左边最后遍历的节点 = 右边的第一个节点
-     * 下面的做法可以达到这个效果
+     * 解法2，递归，先右后左 + 变量辅助
      *
      * @param root
      */
     public void flatten2(TreeNode root) {
-        if (root == null)
+        if (root == null) {
             return;
-        flatten(root.right);
-        flatten(root.left);
+        }
+        // 先右后左
+        flatten2(root.right);
+        flatten2(root.left);
+        // prev可能是left，也有可能是right
         root.right = prev;
         root.left = null;
         prev = root;
     }
 
     /**
-     * 非递归
+     * 非递归：不断的将左子树放到根与右子树之间
      * 参考：http://www.cnblogs.com/grandyang/p/4293853.html
      *
      * @param root
      */
     public void flatten3(TreeNode root) {
-        if (root == null)
+        if (root == null) {
             return;
+        }
 
         TreeNode cur = root;
         while (cur != null) {
+            // 不断的将左子树放到根与右子树之间
             if (cur.left != null) {
                 TreeNode temp = cur.left;
                 while (temp.right != null) {
