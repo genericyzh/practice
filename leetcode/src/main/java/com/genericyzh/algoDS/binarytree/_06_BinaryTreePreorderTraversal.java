@@ -7,7 +7,7 @@ import java.util.List;
 
 /**
  * https://leetcode.com/problems/binary-tree-preorder-traversal/description/
- * 给出一个二叉树，返回前缀数组
+ * 给出一个二叉树，返回先序遍历（【根左右】）数组
  *
  * @author genericyzh
  * @date 2017/9/2 23:09
