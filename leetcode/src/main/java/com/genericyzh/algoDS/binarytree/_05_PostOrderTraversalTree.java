@@ -4,7 +4,7 @@ import java.util.*;
 
 /**
  * https://leetcode.com/problems/binary-tree-postorder-traversal
- * 给出一个二叉树，返回后序遍历的节点val数组
+ * 给出一个二叉树，返回后序遍历(【左右根】)的节点val数组
  *
  * @author genericyzh
  * @date 2017/9/2 18:30
