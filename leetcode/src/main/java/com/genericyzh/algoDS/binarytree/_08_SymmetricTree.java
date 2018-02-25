@@ -38,8 +38,9 @@ public class _08_SymmetricTree {
     }
 
     /**
-     * 非递归，错误
-     * 注意：ArrayDeque不能添加null；
+     * 非递归：BFS + 回文判断
+     * 注意：
+     * ArrayDeque不能添加null；
      * list.add(treeNode.left.val)会 nullpointexception
      *
      * @param root
@@ -52,16 +53,29 @@ public class _08_SymmetricTree {
         Deque<TreeNode> queue = new ArrayDeque<>();
         List<Integer> list = new ArrayList<>();
         List<Integer> list2;
-        queue.offerLast(root);
+        queue.offer(root);
         while (!queue.isEmpty()) {
             list.clear();
             int length = queue.size();
             for (int i = 0; i < length; i++) {
                 TreeNode treeNode = queue.pollFirst();
-                if (treeNode.left != null) queue.offer(treeNode.left);
-                if (treeNode.right != null) queue.offer(treeNode.right);
-                list.add(treeNode.left.val);
-                list.add(treeNode.right.val);
+                if (treeNode.left != null) {
+                    queue.offer(treeNode.left);
+                }
+                if (treeNode.right != null) {
+                    queue.offer(treeNode.right);
+                }
+
+                if (treeNode.left == null) {
+                    list.add(0);
+                } else {
+                    list.add(treeNode.left.val);
+                }
+                if (treeNode.right == null) {
+                    list.add(0);
+                } else {
+                    list.add(treeNode.right.val);
+                }
             }
 //            Integer[] integers = Arrays.<Integer, Integer>copyOf(list.toArray(new Integer[list.size()]), list.size(), Integer[].class);
             list2 = new ArrayList<>(Collections.nCopies(list.size(), 0));
@@ -76,7 +90,7 @@ public class _08_SymmetricTree {
     }
 
     /**
-     * 非递归
+     * 非递归，用两个队列辅助
      *
      * @param root
      * @return
