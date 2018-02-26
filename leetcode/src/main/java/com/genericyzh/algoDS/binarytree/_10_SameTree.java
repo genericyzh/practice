@@ -40,12 +40,38 @@ public class _10_SameTree {
      * @return
      */
     public boolean isSameTree2(TreeNode p, TreeNode q) {
-        if (p == null)
+        if (p == null) {
             return q == null;
-        if (q == null)
+        }
+        if (q == null) {
             return p == null;
-        if (p.val != q.val)
+        }
+        if (p.val != q.val) {
             return false;
+        }
         return isSameTree2(p.left, q.left) && isSameTree(p.right, q.right);
+    }
+
+    /**
+     * 最新写的，2018/02/26
+     *
+     * @param p
+     * @param q
+     * @return
+     */
+    public boolean isSameTree3(TreeNode p, TreeNode q) {
+        if (p == null && q == null) {
+            return true;
+        }
+        if (p == null || q == null) {
+            return false;
+        }
+        if (p.val != q.val) {
+            return false;
+        }
+        boolean check1 = isSameTree3(p.left, q.left);
+        boolean check2 = isSameTree3(p.right, q.right);
+        return check1 && check2;
+
     }
 }
