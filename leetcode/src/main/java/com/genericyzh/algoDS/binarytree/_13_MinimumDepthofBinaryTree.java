@@ -35,12 +35,16 @@ public class _13_MinimumDepthofBinaryTree {
      * @return
      */
     public int minDepth2(TreeNode root) {
-        if (root == null)
+        if (root == null) {
             return 0;
+        }
         int left = minDepth2(root.left);
         int right = minDepth2(root.right);
-        if (left == 0 || right == 0)
+        // 左或右是空的情况
+        if (left == 0 || right == 0) {
             return 1 + left + right;
+        }
+        // 左跟右都不空
         return 1 + Math.min(left, right);
     }
 
