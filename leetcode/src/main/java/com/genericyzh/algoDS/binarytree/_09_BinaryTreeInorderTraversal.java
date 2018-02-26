@@ -53,7 +53,9 @@ public class _09_BinaryTreeInorderTraversal {
 
 
     void inOrder(TreeNode x, List<Integer> list) {
-        if (x == null) return;
+        if (x == null) {
+            return;
+        }
         inOrder(x.left, list);
         list.add(x.val);
         inOrder(x.right, list);
