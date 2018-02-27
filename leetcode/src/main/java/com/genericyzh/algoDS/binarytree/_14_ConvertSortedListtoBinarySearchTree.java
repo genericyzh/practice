@@ -49,7 +49,7 @@ public class _14_ConvertSortedListtoBinarySearchTree {
 
     /**
      * 错误示范：
-     * 以下算法及时断开后，拿不到正确的mid
+     * 以下算法即使断开后，拿不到正确的mid
      * @param head
      * @return
      */
