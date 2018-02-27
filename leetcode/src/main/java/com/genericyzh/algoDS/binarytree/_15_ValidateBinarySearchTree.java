@@ -40,7 +40,7 @@ public class _15_ValidateBinarySearchTree {
     }
 
     /**
-     * 父子都比较，会更快点
+     * 父子都比较，会更快点（看上去感觉跟上面的解法一毛一样-2018/02/27）
      *
      * @param root
      * @return
@@ -58,5 +58,56 @@ public class _15_ValidateBinarySearchTree {
         } else {
             return false;
         }
+    }
+
+    /**
+     * 错误，以下只判断了root的左右节点，不能判断root的所有左节点/右节点都满足
+     * e.g.[10,5,15,null,null,6,20]
+     *
+     * @param root
+     * @return
+     */
+    public boolean isValidBST3(TreeNode root) {
+        if (root == null) {
+            return true;
+        }
+        if (root.left == null && root.right == null) {
+            return true;
+        }
+        if (root.left != null && root.left.val >= root.val) {
+            return false;
+        }
+        if (root.right != null && root.right.val <= root.val) {
+            return false;
+        }
+        return isValidBST3(root.left) & isValidBST3(root.left);
+    }
+
+    public boolean isValidBST4(TreeNode root) {
+        if (root == null) {
+            return true;
+        }
+        return check(root, Long.MIN_VALUE, Long.MAX_VALUE);
+    }
+
+    private boolean check(TreeNode root, long low, long high) {
+        if (root.left == null && root.right == null) {
+            return true;
+        }
+        if (root.left != null && !(low < root.left.val && root.left.val < root.val)) {
+            return false;
+        }
+        if (root.right != null && !(root.val < root.right.val && root.right.val < high)) {
+            return false;
+        }
+        boolean check = true;
+        if (root.left != null) {
+            check = check(root.left, low, root.val);
+        }
+        boolean check2 = true;
+        if (root.right != null) {
+            check2 = check(root.right, root.val, high);
+        }
+        return check & check2;
     }
 }
