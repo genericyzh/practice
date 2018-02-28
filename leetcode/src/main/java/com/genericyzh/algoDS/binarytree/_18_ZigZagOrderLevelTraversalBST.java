@@ -5,11 +5,11 @@ import java.util.*;
 /**
  * https://leetcode.com/problems/binary-tree-zigzag-level-order-traversal/description/
  * Given binary tree [3,9,20,null,null,15,7],
- * 3
- * / \
- * 9  20
- * /  \
- * 15   7
+ * ****3
+ * ** / \
+ * * 9  20
+ * *** /  \
+ * ** 15   7
  * return its zigzag level order traversal as:
  * [
  * [3],
@@ -39,8 +39,12 @@ public class _18_ZigZagOrderLevelTraversalBST {
             for (int i = 0; i < size; i++) {
                 TreeNode poll = queue.poll();
                 level.add(poll.val);
-                if (poll.left != null) queue.offer(poll.left);
-                if (poll.right != null) queue.offer(poll.right);
+                if (poll.left != null) {
+                    queue.offer(poll.left);
+                }
+                if (poll.right != null) {
+                    queue.offer(poll.right);
+                }
             }
             if (odd) {
                 list.add(level);
