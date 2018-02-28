@@ -45,12 +45,18 @@ public class _17_KthSmallestElementinaBST {
     int ct;
 
     public int kthSmallest2(TreeNode root, int k) {
-        if (root == null) return -1;
+        if (root == null) {
+            return -1;
+        }
         int res = kthSmallest(root.left, k);
-        if (ct == k) return res;
+        if (ct == k) {
+            return res;
+        }
         ct++;
-        if (ct == k) return root.val;
-        return kthSmallest(root.right, k);
+        if (ct == k) {
+            return root.val;
+        }
+        return kthSmallest2(root.right, k);
     }
 
     /**
