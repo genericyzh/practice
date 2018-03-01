@@ -79,6 +79,38 @@ public class _22_BinaryTreeRightSideView {
         helper(root.left, current + 1, lst);
     }
 
+    /**
+     * 解法3，错误解法
+     * 错误例子：[1,2,3,4]
+     *
+     * @param root
+     * @return
+     */
+    public List<Integer> rightSideView3(TreeNode root) {
+        if (root == null) {
+            return new LinkedList<>();
+        }
+        List<Integer> lst = new LinkedList<>();
+        helper2(root, lst);
+        return lst;
+    }
+
+    /**
+     * @param root 当前节点
+     * @param lst  结果集
+     */
+    private void helper2(TreeNode root, List<Integer> lst) {
+        if (root == null) {
+            return;
+        }
+        lst.add(root.val);
+        if (root.right != null) {
+            helper2(root.right, lst);
+        } else {
+            helper2(root.left, lst);
+        }
+    }
+
     public static void main(String[] args) {
         TreeNode treeNode = TreeNode.mkTree("[1,2,3,null,5,null,4]");
         _22_BinaryTreeRightSideView binaryTreeRightSideView = new _22_BinaryTreeRightSideView();
