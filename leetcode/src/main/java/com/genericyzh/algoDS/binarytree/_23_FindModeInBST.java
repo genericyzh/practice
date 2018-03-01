@@ -1,17 +1,20 @@
 package com.genericyzh.algoDS.binarytree;
 
-import java.util.*;
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.stream.Collectors;
 
 /**
  * https://leetcode.com/problems/find-mode-in-binary-search-tree/description/
- * 给出一个存在重复数字的搜索树：左节点小于等于中街店，右节点大于等于中节点
+ * 给出一个存在重复数字的搜索树：左节点小于等于中j节点，右节点大于等于中节点
  * 求：出现次数最多的数字，可能有多个，返回数组
  * （最好能够不使用多余的存储空间）
  *
  * @author genericyzh
  * @date 2017/9/19 22:14
  */
-public class _23_FindModeinBST {
+public class _23_FindModeInBST {
     int maxCount = 0;
     int curCount = 0;
     int modeCount;
@@ -28,12 +31,19 @@ public class _23_FindModeinBST {
     }
 
     private void inorder(TreeNode root) {
-        if (root == null) return;
+        if (root == null) {
+            return;
+        }
         inorder(root.left);
         handleValue(root.val);
         inorder(root.right);
     }
 
+    /**
+     * 处理方法
+     *
+     * @param value
+     */
     private void handleValue(int value) {
         if (value != curVal) {
             curVal = value;
@@ -62,40 +72,53 @@ public class _23_FindModeinBST {
      * @return
      */
     public int[] findMode2(TreeNode root) {
-        if (root == null) return new int[0];
+        if (root == null) {
+            return new int[0];
+        }
         Map<Integer, Integer> map = new HashMap<>();
         find(root, map);
-        List<Integer> list = new ArrayList<>();
+        int[] ints = map.entrySet().stream()
+                .filter(integerIntegerEntry -> integerIntegerEntry.getValue() == max)
+                .map(integerIntegerEntry1 -> integerIntegerEntry1.getKey())
+                .collect(Collectors.toList())
+                .stream()
+                .mapToInt(Integer::intValue)
+                .toArray();
+        /*List<Integer> list = new ArrayList<>();
         for (Integer integer : map.keySet()) {
-            if (map.get(integer) == max) list.add(integer);
+            if (map.get(integer) == max) {
+                list.add(integer);
+            }
         }
         int[] a = new int[list.size()];
         int i = 0;
         for (Integer integer : list) {
             a[i++] = integer;
-        }
+        }*/
 
-        return a;
+        return ints;
     }
 
     private void find(TreeNode root, Map<Integer, Integer> map) {
-        if (root == null) return;
+        if (root == null) {
+            return;
+        }
         if (map.containsKey(root.val)) {
             int val = map.get(root.val) + 1;
             map.put(root.val, val);
             max = Math.max(max, val);
-        } else
+        } else {
             map.put(root.val, 1);
-
+        }
         find(root.left, map);
         find(root.right, map);
-
     }
 
     public static void main(String[] args) {
-        TreeNode treeNode = TreeNode.mkTree2("[1,1,2,1,null,2,null,null,null,2,null]");
-        _23_FindModeinBST findModeinBST = new _23_FindModeinBST();
-        int[] mode = findModeinBST.findMode(treeNode);
+//        TreeNode treeNode = TreeNode.mkTree2("[1,1,2,1,null,2,null,null,null,2,null]");
+        TreeNode treeNode = TreeNode.mkTree("[1,1,1,0,null,null,2,null,null,2,2]");
+        _23_FindModeInBST findModeinBST = new _23_FindModeInBST();
+        int[] mode = findModeinBST.findMode2(treeNode);
         System.out.println(Arrays.toString(mode));
     }
 }
