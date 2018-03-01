@@ -8,6 +8,7 @@ package com.genericyzh.algoDS.binarytree;
  * @date 2017/9/17 23:30
  */
 public class _20_LowestCommonAncestorBST {
+
     /**
      * 在同一边时，继续遍历
      * 不在同一边时：
@@ -33,5 +34,43 @@ public class _20_LowestCommonAncestorBST {
         } else {
             return root;
         }
+    }
+
+    /**
+     * 非递归
+     * 注意：这里用乘法判断是因为，p跟q的大小不确定
+     *
+     * @param root
+     * @param p
+     * @param q
+     * @return
+     */
+    public TreeNode lowestCommonAncestor2(TreeNode root, TreeNode p, TreeNode q) {
+        while ((root.val - p.val) * (root.val - q.val) > 0) {
+            root = p.val < root.val ? root.left : root.right;
+        }
+        return root;
+    }
+
+    /**
+     * 递归，一行搞定
+     *
+     * @param root
+     * @param p
+     * @param q
+     * @return
+     */
+    public TreeNode lowestCommonAncestor3(TreeNode root, TreeNode p, TreeNode q) {
+        return (root.val - p.val) * (root.val - q.val) < 1 ? root :
+                lowestCommonAncestor3(p.val < root.val ? root.left : root.right, p, q);
+    }
+
+
+    public static void main(String[] args) {
+        TreeNode node = TreeNode.mkTree("[6,2,8,0,4,7,9,null,null,3,5,null,null,null,null]");
+        _20_LowestCommonAncestorBST lowestCommonAncestorBST = new _20_LowestCommonAncestorBST();
+//        TreeNode node1 = lowestCommonAncestorBST.lowestCommonAncestor(node, new TreeNode(10), new TreeNode(12));
+        TreeNode node1 = lowestCommonAncestorBST.lowestCommonAncestor(node, new TreeNode(1), new TreeNode(10)); // 错误例子
+        System.out.println(node1);
     }
 }
