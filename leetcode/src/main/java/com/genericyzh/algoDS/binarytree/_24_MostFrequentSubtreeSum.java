@@ -1,6 +1,9 @@
 package com.genericyzh.algoDS.binarytree;
 
-import java.util.*;
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.stream.Collectors;
 
 /**
  * https://leetcode.com/problems/most-frequent-subtree-sum/description/
@@ -21,20 +24,14 @@ public class _24_MostFrequentSubtreeSum {
         Map<Integer, Integer> map = new HashMap<>();
         getSum(root, map);
 
-        List<Integer> list = new ArrayList<>();
-        for (Integer integer : map.keySet()) {
-            if (map.get(integer) == max)
-                list.add(integer);
-        }
-        int[] array = list.stream().mapToInt(i -> i).toArray();
-
-        /*int[] a = new int[list.size()];
-        int i = 0;
-        for (Integer integer : list) {
-            a[i++] = integer;
-        }*/
-
-        return array;
+        int[] result = map.entrySet().stream()
+                .filter(integerIntegerEntry -> integerIntegerEntry.getValue().equals(max))
+                .map(integerIntegerEntry -> integerIntegerEntry.getKey())
+                .collect(Collectors.toList())
+                .stream()
+                .mapToInt(Integer::intValue)
+                .toArray();
+        return result;
     }
 
     private int getSum(TreeNode root, Map<Integer, Integer> map) {
@@ -54,8 +51,8 @@ public class _24_MostFrequentSubtreeSum {
         if (root == null) {
             return 0;
         }
-        int leftSum = getSum(root.left, map);
-        int rightSum = getSum(root.right, map);
+        int leftSum = getSum2(root.left, map);
+        int rightSum = getSum2(root.right, map);
         int sum = leftSum + rightSum + root.val;
         if (map.containsKey(sum)) {
             int val = map.get(sum) + 1;
