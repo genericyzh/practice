@@ -38,7 +38,6 @@ public class _27_SerializeAndDeserializeBT {
             sb.append("#,");
         } else {
             sb.append(root.val).append(",");
-            ;
             serialHelper(root.left, sb);
             serialHelper(root.right, sb);
         }
@@ -46,7 +45,9 @@ public class _27_SerializeAndDeserializeBT {
 
     // Decodes your encoded data to tree.
     public TreeNode deserialize(String data) {
-        if (data == null || data.length() == 0) return null;
+        if (data == null || data.length() == 0) {
+            return null;
+        }
 
         java.util.StringTokenizer st = new java.util.StringTokenizer(data, ",");
         return deserialHelper(st);
@@ -72,7 +73,9 @@ public class _27_SerializeAndDeserializeBT {
      * 解法二：BFS，把null也保存起来
      */
     public String serialize2(TreeNode root) {
-        if (root == null) return "";
+        if (root == null) {
+            return "";
+        }
         List<Integer> list = new ArrayList<>();
         Deque<TreeNode> que = new LinkedList<>(); // ArrayDeque不能添加null，所以用linkedList
         que.offer(root);
@@ -97,7 +100,9 @@ public class _27_SerializeAndDeserializeBT {
      * then we set left and right children of non-null values of T array.
      */
     public TreeNode deserialize2(String data) {
-        if (data.equals("")) return null;
+        if (data.equals("")) {
+            return null;
+        }
         String[] a = data.split(",");
         TreeNode[] t = new TreeNode[a.length];
         for (int i = 0; i < a.length; i++) {
@@ -115,7 +120,9 @@ public class _27_SerializeAndDeserializeBT {
     }
 
     TreeNode getNode(String s) {
-        if (s.equals("null")) return null;
+        if (s.equals("null")) {
+            return null;
+        }
         return new TreeNode(Integer.parseInt(s));
     }
 
