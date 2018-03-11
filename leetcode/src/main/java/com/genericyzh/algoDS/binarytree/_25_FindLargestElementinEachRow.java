@@ -48,7 +48,7 @@ public class _25_FindLargestElementinEachRow {
     }
 
     /**
-     * 递归写法，先序遍历
+     * 递归写法，先序遍历，添加dept参数判断是第几层
      *
      * @param root
      * @return
