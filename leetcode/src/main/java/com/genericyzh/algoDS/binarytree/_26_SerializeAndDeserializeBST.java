@@ -58,7 +58,9 @@ public class _26_SerializeAndDeserializeBST {
     //  3 6
     // 2   7
     private TreeNode getNode(Deque<Integer> q) {  //q: 5,3,2,6,7
-        if (q.isEmpty()) return null; // 注意F
+        if (q.isEmpty()) {
+            return null;
+        }
         Integer root = q.poll();
         TreeNode node = new TreeNode(root);  //root (5)
         Deque<Integer> leftQue = new ArrayDeque<>();
