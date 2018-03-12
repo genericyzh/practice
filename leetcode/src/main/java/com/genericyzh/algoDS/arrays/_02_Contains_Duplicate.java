@@ -18,7 +18,7 @@ public class _02_Contains_Duplicate {
      * @param nums
      * @return
      */
-    public static boolean containsDuplicate(int[] nums) {
+    public boolean containsDuplicate(int[] nums) {
         if (nums == null) {
             return false;
         } else if (nums.length == 0 || nums.length == 1) {
@@ -34,7 +34,7 @@ public class _02_Contains_Duplicate {
         return false;
     }
 
-    public static boolean containsDuplicate2(int[] nums) {
+    public boolean containsDuplicate2(int[] nums) {
         Arrays.sort(nums);
         for (int ind = 1; ind < nums.length; ind++) {
             if (nums[ind] == nums[ind - 1]) {
@@ -68,15 +68,18 @@ public class _02_Contains_Duplicate {
     public static boolean containsDuplicate4(int[] nums) {
         Set<Integer> set = new HashSet<>();
         for (int i : nums) {
-            if (!set.add(i)) return true;
+            if (!set.add(i)) {
+                return true;
+            }
         }
         return false;
     }
 
 
     public static void main(String[] args) {
+        _02_Contains_Duplicate contains_duplicate = new _02_Contains_Duplicate();
         int[] nums = {1, 2, 6, 4, 5};
-        System.out.println(containsDuplicate2(nums));
+        System.out.println(contains_duplicate.containsDuplicate2(nums));
         for (int num : nums) {
             System.out.println(num);
         }
