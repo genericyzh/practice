@@ -1,5 +1,7 @@
 package com.genericyzh.algoDS.arrays;
 
+import java.util.Arrays;
+
 /**
  * leetcode https://leetcode.com/problems/rotate-array/#/description
  * https://leetcode.com/articles/rotate-array/
@@ -20,7 +22,7 @@ public class _01_RotateArray {
      * @param nums
      * @param k
      */
-    public static void rotate(int[] nums, int k) {
+    public void rotate(int[] nums, int k) {
         if (nums == null) {
             throw new NullPointerException("数组不能为空");
         }
@@ -51,20 +53,23 @@ public class _01_RotateArray {
      * @param nums
      * @param k
      */
-    public static void rotate2(int[] nums, int k) {
+    public void rotate2(int[] nums, int k) {
         if (nums == null) {
             throw new NullPointerException("数组不能为空");
         }
         k = k % nums.length;
+        if (k == 0) {
+            return;
+        }
         int count = 0;
         for (int start = 0; count < nums.length; start++) {
             int currentIndex = start;
-            int prevVal = nums[start];
+            int curVal = nums[start];
             do {
                 int nextIndex = (currentIndex + k) % nums.length;
                 int nextVal = nums[nextIndex];
-                nums[nextIndex] = prevVal;
-                prevVal = nextVal;
+                nums[nextIndex] = curVal;
+                curVal = nextVal;
                 currentIndex = nextIndex;
                 count++;
             } while (currentIndex != start); // 有可能形成环,有环的情况下要跳出，不然会死循环
@@ -72,16 +77,10 @@ public class _01_RotateArray {
     }
 
     public static void main(String args[]) {
-        String Str1 = new String("runoob");
-        String Str2 = Str1;
-        String Str3 = new String("runoob");
-        boolean retVal;
-
-        retVal = Str1.equals(Str2);
-        System.out.println("返回值 = " + retVal);
-
-        retVal = Str1.equals(Str3);
-        System.out.println("返回值 = " + retVal);
+        _01_RotateArray rotateArray = new _01_RotateArray();
+        int[] ints = {1, 2, 3, 4, 5};
+        rotateArray.rotate2(ints, 1);
+        System.out.println(Arrays.toString(ints));
     }
 
 }
