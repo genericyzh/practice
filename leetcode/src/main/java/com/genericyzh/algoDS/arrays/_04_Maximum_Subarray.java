@@ -57,6 +57,7 @@ public class _04_Maximum_Subarray {
         _04_Maximum_Subarray maximum_subarray = new _04_Maximum_Subarray();
         int[] a = {-2, 1, -3, 4, -1, 2, 1, -5, 4};
 //        int[] a = {-1, -2};
-        maximum_subarray.maxSubArray(a);
+        int i = maximum_subarray.maxSubArray(a);
+        System.out.println(i);
     }
 }
