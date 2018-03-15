@@ -51,7 +51,9 @@ public class _04_PalindromeLinkedList {
      * @return
      */
     public boolean isPalindrome2(ListNode head) {
-        if (head == null || head.next == null) return true;
+        if (head == null || head.next == null) {
+            return true;
+        }
 
         ListNode slow = head;
         ListNode fast = head;
@@ -73,7 +75,9 @@ public class _04_PalindromeLinkedList {
         }
 
         while (fast != null) {
-            if (fast.val != slow.val) return false;
+            if (fast.val != slow.val) {
+                return false;
+            }
             fast = fast.next;
             slow = slow.next;
         }
