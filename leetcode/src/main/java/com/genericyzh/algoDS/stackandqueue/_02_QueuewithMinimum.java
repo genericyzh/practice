@@ -26,8 +26,8 @@ public class _02_QueuewithMinimum {
 
     private void push(long i) {
         queue.add(i);
-        if (mins.isEmpty() || mins.peekLast().compareTo(i) <= 0)
-            mins.add(i);
+        if (mins.isEmpty() || mins.peekLast().compareTo(i) <= 0){
+            mins.add(i);}
         else {
             while (!mins.isEmpty() && mins.peekLast().compareTo(i) > 0) {
                 mins.removeLast();
