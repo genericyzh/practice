@@ -32,13 +32,18 @@ public class _03_ImplementStackUsingQueues {
          * Push element x onto stack.
          */
         public void push(int x) {
-            if (q.isEmpty()) q.add(x);
-            else {
-                while (!q.isEmpty()) // copy all to helper
+            if (q.isEmpty()) {
+                q.add(x);
+            } else {
+                while (!q.isEmpty()) {
+                    // copy all to helper
                     temp.add(q.poll());
+                }
                 q.add(x); // add element
-                while (!temp.isEmpty()) // copy back all to helper
+                while (!temp.isEmpty()) {
+                    // copy back all to helper
                     q.add(temp.poll());
+                }
             }
 
         }
