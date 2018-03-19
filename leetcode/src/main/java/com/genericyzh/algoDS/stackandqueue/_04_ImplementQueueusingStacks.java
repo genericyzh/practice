@@ -33,8 +33,9 @@ public class _04_ImplementQueueusingStacks {
     public int pop() {
         if (helper.isEmpty()) {
 
-            while (!stack.isEmpty())
+            while (!stack.isEmpty()) {
                 helper.push(stack.pop());
+            }
         }
 
         return helper.pop();
@@ -46,8 +47,9 @@ public class _04_ImplementQueueusingStacks {
     public int peek() {
         if (helper.isEmpty()) {
 
-            while (!stack.isEmpty())
+            while (!stack.isEmpty()) {
                 helper.push(stack.pop());
+            }
         }
         return helper.peek();
     }
