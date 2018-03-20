@@ -50,7 +50,7 @@ public class Dichotomy {
                 //一定在mid位置的右边，并且不包括当前mid位置
                 left = mid + 1;
             } else {
-                //故意写得和参考博文不一样，下面有证明
+                // 只能确定<=mid（因为求最小下标，如果最大下标，就是>=mid）
                 right = mid;
             }
         }
@@ -90,7 +90,7 @@ public class Dichotomy {
     }
 
     /**
-     * 3、查找第一个等于或者大于Key的元素的位置
+     * 3、查找第一个>=Key的元素的位置
      *
      * @param arr
      * @param key
@@ -99,7 +99,7 @@ public class Dichotomy {
     public static int searchFirstEqualOrLarger(int[] arr, int key) {
         int length = arr.length;
         int left = 0, right = length - 1;
-        while (left < right) {
+        while (left <= right) {
             int mid = (left + right) / 2;
             if (arr[mid] > key) {
                 right = mid - 1;
@@ -113,7 +113,7 @@ public class Dichotomy {
     }
 
     /**
-     * 4、查找第一个大于key的元素的位置
+     * 4、查找第一个>key的元素的位置
      *
      * @param arr
      * @param key
@@ -124,6 +124,7 @@ public class Dichotomy {
         int left = 0, right = length - 1;
         while (left <= right) {
             int mid = (left + right) / 2;
+            // 这里可能mid-1减多了，可能mid-1就是key的下标，但是后面left+1会加回来，而且循环条件是left <= right
             if (arr[mid] > key) {
                 right = mid - 1;
             } else if (arr[mid] <= key) {
@@ -134,7 +135,7 @@ public class Dichotomy {
     }
 
     /**
-     * 5、查找最后一个等于或者小于key的元素的位置
+     * 5、查找最后一个<=key的元素的位置
      *
      * @param key
      * @return
@@ -146,8 +147,18 @@ public class Dichotomy {
             int m = (left + right) / 2;
             if (arr[m] > key) {
                 right = m - 1;
-            } else if (arr[m] <= key) {
+            } else if (arr[m] < key) {
+                // 这里有可能加多了，+1之后，可能arr[left]>=key;
+                // 但是加多了之后，right会减回来，如果不存在相等情况，那么最后right会在left的左边，最后返回right即系答案
                 left = m + 1;
+            } else {
+                left = m + 1;
+//                // 处理等于的情况，如果存在等于的情况，那么最终答案会在这个else中出现
+//                if (left + 1 <= right && arr[left + 1] == key) {
+//                    left = m + 1;
+//                } else {
+//                    return left;
+//                }
             }
         }
         return right;
@@ -187,7 +198,7 @@ public class Dichotomy {
 //        System.out.printf("Last Smaller          : %2d \n", searchLastSmaller(arr, 5));
 //        System.out.println("pause");
 
-        int[] arr = {3, 4, 4};
+        int[] arr = {3, 5, 5};
         System.out.printf("First Equal           : %2d \n", searchFirstEqual(arr, 4));
         System.out.printf("Last Equal            : %2d \n", searchLastEqual(arr, 4));
         System.out.printf("First Equal or Larger : %2d \n", searchFirstEqualOrLarger(arr, 4));
