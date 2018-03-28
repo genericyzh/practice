@@ -1,0 +1,21 @@
+@startuml
+
+title obtainFreshBeanFactory()
+
+[->AbstractApplicationContext: obtainFreshBeanFactory
+activate AbstractApplicationContext #DarkSalmon
+AbstractApplicationContext->AbstractRefreshableApplicationContext: refreshBeanFactory()
+activate AbstractApplicationContext #DarkSalmon
+AbstractRefreshableApplicationContext->AbstractRefreshableApplicationContext:DefaultListableBeanFactory beanFactory = createBeanFactory();
+AbstractRefreshableApplicationContext->AbstractRefreshableApplicationContext:customizeBeanFactory(beanFactory)
+AbstractRefreshableApplicationContext->AbstractRefreshableApplicationContext:loadBeanDefinitions(beanFactory)
+AbstractRefreshableApplicationContext->AbstractRefreshableApplicationContext:this.beanFactory = beanFactory;
+AbstractRefreshableApplicationContext->AbstractApplicationContext:
+deactivate AbstractApplicationContext
+AbstractApplicationContext->AbstractApplicationContext: getBeanFactory()
+activate AbstractApplicationContext #DarkSalmon
+deactivate AbstractApplicationContext
+
+[<- AbstractApplicationContext: return beanFactory;
+deactivate AbstractApplicationContext
+@enduml
