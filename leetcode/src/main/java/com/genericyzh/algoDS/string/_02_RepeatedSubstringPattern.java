@@ -15,7 +15,7 @@ public class _02_RepeatedSubstringPattern {
      * @param s
      * @return
      */
-    public boolean repeatedSubstringPattern2(String s) {
+    public boolean repeatedSubstringPattern1(String s) {
         if (s == null || s.length() <= 1) return false;
 
         int len = s.length(), mid = len / 2; // half
@@ -41,16 +41,80 @@ public class _02_RepeatedSubstringPattern {
         return false;
     }
 
-    public boolean repeatedSubstringPattern(String str) {
-        int n = str.length();
+    /**
+     * 超时方法，当时不知道怎么写的...
+     *
+     * @param s
+     * @return
+     */
+    public boolean repeatedSubstringPattern2(String s) {
+        int n = s.length();
         for (int i = n / 2; i >= 1; --i) {
             if (n % i == 0) {
                 int c = n / i;
                 String t = "";
                 for (int j = 0; j < c; ++j) {
-                    t += str.substring(0, i);
+                    t += s.substring(0, i);
                 }
-                if (t.equals(str)) return true;
+                if (t.equals(s)) {
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
+
+    /**
+     * 自己写的
+     *
+     * @param s
+     * @return
+     */
+    public boolean repeatedSubstringPattern(String s) {
+        int length = s.length();
+        for (int i = 1; i <= length / 2; i++) {
+            if (length % i != 0) {
+                continue;
+            }
+            int l = 0;
+            int r = l + i;
+            String temp = s.substring(0, i);
+            while (r <= length) {
+                String compareStr = s.substring(l, r);
+                if (!(temp.equals(compareStr))) {
+                    break;
+                }
+                l += i;
+                r += i;
+            }
+            if (r > length) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    /**
+     * discuss中的代码
+     *
+     * @param str
+     * @return
+     */
+    public boolean repeatedSubstringPattern4(String str) {
+        int len = str.length();
+        for (int i = len / 2; i >= 1; i--) {
+            if (len % i == 0) {
+                int m = len / i;
+                String subS = str.substring(0, i);
+                int j;
+                for (j = 1; j < m; j++) {
+                    if (!subS.equals(str.substring(j * i, i + j * i))) {
+                        break;
+                    }
+                }
+                if (j == m) {
+                    return true;
+                }
             }
         }
         return false;
