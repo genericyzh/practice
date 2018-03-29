@@ -1,4 +1,4 @@
-package com.genericyzh.algoDS.string;
+package com.genericyzh.leetcode.string;
 
 /**
  * https://leetcode.com/problems/first-unique-character-in-a-string/description/

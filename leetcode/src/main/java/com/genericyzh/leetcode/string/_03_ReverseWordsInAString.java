@@ -1,4 +1,4 @@
-package com.genericyzh.algoDS.string;
+package com.genericyzh.leetcode.string;
 
 import java.util.ArrayList;
 import java.util.Collections;
