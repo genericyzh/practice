@@ -8,17 +8,14 @@ package com.genericyzh.algoDS.string;
  * @date 2017/10/7 21:38
  */
 public class _01_FirstUniqueCharacterInAString {
-    int[] CHAR = new int[256];
 
     public int firstUniqChar(String s) {
-        if (s == null || s.isEmpty()) {
-            return -1;
+        int freq[] = new int[26];
+        for (int i = 0; i < s.length(); i++) {
+            freq[s.charAt(i) - 'a']++;
         }
         for (int i = 0; i < s.length(); i++) {
-            CHAR[s.charAt(i)]++;
-        }
-        for (int i = 0; i < s.length(); i++) {
-            if (CHAR[s.charAt(i)] == 1) {
+            if (freq[s.charAt(i) - 'a'] == 1) {
                 return i;
             }
         }
