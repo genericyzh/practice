@@ -7,7 +7,7 @@ package com.genericyzh.leetcode.string;
  * @author genericyzh
  * @date 2018/4/3 23:52
  */
-public class _16_OneEditDistance {
+public class _16_MultiplyStrings {
 
     public String multiply(String num1, String num2) {
         int m = num1.length(), n = num2.length();
