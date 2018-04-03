@@ -3,6 +3,7 @@ package com.genericyzh.leetcode.string;
 /**
  * https://leetcode.com/problems/multiply-strings/description/
  * 题意：给出两个字符串的数字，求和（返回字符串）
+ * 参考：https://leetcode.com/problems/multiply-strings/discuss/17605/Easiest-JAVA-Solution-with-Graph-Explanation
  *
  * @author genericyzh
  * @date 2018/4/3 23:52
