@@ -62,6 +62,9 @@ public class _10_LinkedListCycle2 {
             slow = slow.next;
             fast = fast.next.next;
         }
+        if (slow == null) {
+            return null;
+        }
         ListNode temp = slow.next;
         slow.next = null;// break the link
         ListNode link = findLink(head, temp);
