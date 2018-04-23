@@ -36,6 +36,7 @@ public class _05_PostOrderTraversalTree {
     /**
      * 非递归写法:
      * 用栈和集合辅助
+     * 存在的问题：如果存在重复的TreeNode，那么就会有问题
      *
      * @param root
      * @return
@@ -129,7 +130,7 @@ public class _05_PostOrderTraversalTree {
      * @param root
      * @return
      */
-    public List<Integer> postorderTraversal44(TreeNode root) {
+    public List<Integer> postorderTraversal4(TreeNode root) {
         List<Integer> result = new LinkedList<>();
         if (root == null) {
             return result;
@@ -151,6 +152,12 @@ public class _05_PostOrderTraversalTree {
         }
         Collections.reverse(result);
         return result;
+    }
+
+    public static void main(String[] args) {
+        TreeNode node = TreeNode.mkTree("[1,2,3,null,null,2,2]"); // 有问题的Demo，输出2,3,1
+        List<Integer> integers = new _05_PostOrderTraversalTree().postorderTraversal(node);
+        integers.forEach(System.out::println); // 正确答案2,2,2,3,1
     }
 
 }
