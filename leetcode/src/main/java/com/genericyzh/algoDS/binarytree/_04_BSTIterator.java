@@ -9,9 +9,9 @@ import java.util.Deque;
  * 1、hasNext()：是否存在下一个节点
  * 2、next()：输出下一个节点的val（由小到大输出）
  * 典型的非递归中序遍历！
- * <p>
+ * <p/>
  * 二叉搜索树：
- * <p>
+ * <p/>
  * 若任意节点的左子树不空，则左子树上所有节点的值均小于它的根节点的值；
  * 若任意节点的右子树不空，则右子树上所有节点的值均大于它的根节点的值；
  * 任意节点的左、右子树也分别为二叉查找树；
@@ -41,10 +41,10 @@ public class _04_BSTIterator {
      */
     public int next() {
         while (cur != null) {
-            stack.offerLast(cur);
+            stack.push(cur);
             cur = cur.left;
         }
-        TreeNode temp = stack.pollLast();
+        TreeNode temp = stack.pop();
         cur = temp.right;
         return temp.val;
     }
