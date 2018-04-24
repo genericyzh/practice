@@ -41,6 +41,7 @@ public class _07_FlattenBinaryTreetoLinkedList {
 
     /**
      * 解法2，递归，先右后左 + 变量辅助
+     * 左节点用到右节点、中节点用到左节点
      *
      * @param root
      */
@@ -70,7 +71,7 @@ public class _07_FlattenBinaryTreetoLinkedList {
 
         TreeNode cur = root;
         while (cur != null) {
-            // 不断的将左子树放到根与右子树之间
+            // 不断的将左子树放到根与右子树之间，一层层的放
             if (cur.left != null) {
                 TreeNode temp = cur.left;
                 while (temp.right != null) {
