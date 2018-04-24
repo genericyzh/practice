@@ -32,9 +32,18 @@ public class _08_SymmetricTree {
             return false;
         }
         boolean con1 = left.val == right.val ? true : false;
+        if (con1 == false) {
+            return false;
+        }
         boolean con2 = check(left.left, right.right);
+        if (con2 == false) {
+            return false;
+        }
         boolean con3 = check(left.right, right.left);
-        return con1 & con2 & con3;
+        if (con3 == false) {
+            return false;
+        }
+        return true;
     }
 
     /**
@@ -52,7 +61,6 @@ public class _08_SymmetricTree {
         }
         Deque<TreeNode> queue = new ArrayDeque<>();
         List<Integer> list = new ArrayList<>();
-        List<Integer> list2;
         queue.offer(root);
         while (!queue.isEmpty()) {
             list.clear();
@@ -77,20 +85,18 @@ public class _08_SymmetricTree {
                     list.add(treeNode.right.val);
                 }
             }
-//            Integer[] integers = Arrays.<Integer, Integer>copyOf(list.toArray(new Integer[list.size()]), list.size(), Integer[].class);
-            list2 = new ArrayList<>(Collections.nCopies(list.size(), 0));
-            Collections.copy(list2, list);
-            Collections.reverse(list2);
-            boolean flag = Objects.deepEquals(list, list2);
-            if (flag == false) {
-                return false;
+            for (int i = 0; i <= (list.size() - 1) / 2; i++) {
+                if (!list.get(i).equals(list.get(list.size() - 1 - i))) {
+                    return false;
+                }
             }
         }
         return true;
     }
 
     /**
-     * 非递归，用两个队列辅助
+     * 非递归，使用两个队列模拟递归
+     * 一层层的判断
      *
      * @param root
      * @return
