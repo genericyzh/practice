@@ -104,10 +104,17 @@ public class _15_ValidateBinarySearchTree {
         if (root.left != null) {
             check = check(root.left, low, root.val);
         }
+        if (check == false) {
+            return false;
+        }
         boolean check2 = true;
         if (root.right != null) {
             check2 = check(root.right, root.val, high);
         }
-        return check & check2;
+        if (check2 == false) {
+            return false;
+        }
+        return true;
     }
+
 }
