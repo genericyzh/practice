@@ -103,13 +103,9 @@ public class _23_FindModeInBST {
         if (root == null) {
             return;
         }
-        if (map.containsKey(root.val)) {
-            int val = map.get(root.val) + 1;
-            map.put(root.val, val);
-            max = Math.max(max, val);
-        } else {
-            map.put(root.val, 1);
-        }
+        int val = map.getOrDefault(root.val, 0) + 1;
+        map.put(root.val, val);
+        max = Math.max(max, val);
         find(root.left, map);
         find(root.right, map);
     }
