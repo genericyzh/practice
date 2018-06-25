@@ -57,13 +57,13 @@ public class ConsistentHashCluster extends Cluster {
         long hash = hash(key);
 //        System.out.printf("%s%n", hash);
 
-        SortedMap<Long, Node> subMap = hash >= virNodes.lastKey() ? //当前key的hash是否大于等于最大一个hash值
-                virNodes.tailMap(Long.MIN_VALUE) : virNodes.tailMap(hash); //返回key大于等于hash的map视图
-        if (subMap.isEmpty()) {
-            return null;
+        SortedMap<Long, Node> tail = virNodes.tailMap(hash); //返回key大于等于hash的map视图
+        if (tail.isEmpty()) {
+            // null的话，返回第一个
+            return virNodes.get(virNodes.firstKey());
         }
-//        System.out.printf("subMap.firstKey():%s%n", subMap.firstKey());
-        return subMap.get(subMap.firstKey());//获取该map视图中最小的key值对应的元素，也就是最接近hash的virNode
+//        System.out.printf("tail.firstKey():%s%n", tail.firstKey());
+        return tail.get(tail.firstKey());
     }
 
     long hash(Object... key) {
