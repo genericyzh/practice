@@ -6,7 +6,7 @@
  * We make no guarantees that this code is fit for any purpose.
  * Visit http://www.pragmaticprogrammer.com/titles/pb7con for more book information.
  ***/
-package com.genericyzh.javase.thread.base.sevenweek.day1._07HttpDownloadFixed;
+package com.genericyzh.javase.thread.books.sevenweek.day1._06HttpDownload;
 
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -34,16 +34,12 @@ class Downloader extends Thread {
         listeners.remove(listener);
     }
 
-    private void updateProgress(int n) {
-        ArrayList<ProgressListener> listenersCopy;
-        synchronized (this) {
-            listenersCopy = (ArrayList<ProgressListener>) listeners.clone();
-        }
-        for (ProgressListener listener : listenersCopy) {
+    private synchronized void updateProgress(int n) {
+        for (ProgressListener listener : listeners)
             listener.onProgress(n);
-        }
     }
 
+    @Override
     public void run() {
         int n = 0, total = 0;
         byte[] buffer = new byte[1024];

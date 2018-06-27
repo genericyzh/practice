@@ -1,4 +1,4 @@
-package com.genericyzh.javase.thread.base.sevenweek.day1._01HelloWorld;
+package com.genericyzh.javase.thread.books.sevenweek.day1._01HelloWorld;
 
 /**
  * @author genericyzh

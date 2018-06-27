@@ -1,10 +1,10 @@
-package com.genericyzh.javase.thread.base.sevenweek.day1._03Puzzle;
+package com.genericyzh.javase.thread.books.sevenweek.day1._03Puzzle;
 
 /**
  * @author genericyzh
  * @date 2018/6/27 0:55
  */
-public class Puzzle2 {
+public class Puzzle3 {
     static boolean answerReady = false;
     static int answer = 0;
     static Thread t1 = new Thread() {
@@ -17,8 +17,12 @@ public class Puzzle2 {
     static Thread t2 = new Thread() {
         @Override
         public void run() {
-            // answerReady可能不会变成true，代码运行后无法退出，HB关系？？
-            while (!answerReady) {
+            // answerReady可能不会变成true，代码运行后无法退出
+            while (true) {
+                if (!answerReady) {
+                    System.out.println("The meaning of life is: " + answer);
+                    break;
+                }
 //                try {
 //                    Thread.sleep(100);
 //                } catch (InterruptedException e) {
@@ -26,15 +30,16 @@ public class Puzzle2 {
 //                }
 //                System.out.println("answerReady is false");
             }
-            System.out.println("The meaning of life is: " + answer);
+//            System.out.println("The meaning of life is: " + answer);
         }
     };
 
     public static void main(String[] args) throws InterruptedException {
-        // 有机会跑出死循环的程序，但是没跑出来。。。暂时没看出跑不出来的问题20180627;跟Puzzle3的区别是while的条件
+        // 有机会跑出死循环的程序
         t1.start();
+//        Thread.sleep(1); // 好像加了这句之后，t2都识别不出answerReady了，死循环
         t2.start();
-        t1.join();
-        t2.join();
+//        t1.join();
+//        t2.join();
     }
 }

@@ -6,16 +6,8 @@
  * We make no guarantees that this code is fit for any purpose.
  * Visit http://www.pragmaticprogrammer.com/titles/pb7con for more book information.
  ***/
-package com.genericyzh.javase.thread.base.sevenweek.day1._04DiningPhilosophers;
+package com.genericyzh.javase.thread.books.sevenweek.day1._07HttpDownloadFixed;
 
-class Chopstick {
-    private int id;
-
-    public Chopstick(int id) {
-        this.id = id;
-    }
-
-    public int getId() {
-        return id;
-    }
+interface ProgressListener {
+    void onProgress(int current);
 }
