@@ -1,4 +1,4 @@
-package com.genericyzh.javase.thread.books.tij4;//: concurrency/LiftOff.java
+package com.genericyzh.javase.thread.books.tij4._01base._01Runnable;//: concurrency/LiftOff.java
 // Demonstration of the Runnable interface.
 
 public class LiftOff implements Runnable {

@@ -1,7 +1,7 @@
 package com.genericyzh.javase.thread.books.tij4._05cooperation;//: concurrency/TestBlockingQueues.java
 // {RunByHand}
 
-import com.genericyzh.javase.thread.books.tij4.LiftOff;
+import com.genericyzh.javase.thread.books.tij4._01base._01Runnable.LiftOff;
 
 import java.io.BufferedReader;
 import java.io.IOException;
