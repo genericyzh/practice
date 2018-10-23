@@ -8,8 +8,8 @@ import java.util.Map;
  */
 public class App {
     public static void main(String[] args) {
-        Map<String, String> map = new HashMap<>();
-        map.put("Hello", "world!");
-        String value = map.get("Hello");
+        String s = new String("hello world");
+        for (int i=0;i<1;i++){
+            }
     }
 }
