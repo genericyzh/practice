@@ -2,6 +2,7 @@ package com.genericyzh.algoDS.binarytree;
 
 import java.util.ArrayDeque;
 import java.util.Deque;
+import java.util.Objects;
 
 /**
  * TreeNode类包含构造树的方法
@@ -16,6 +17,19 @@ public class TreeNode {
 
     TreeNode(int x) {
         val = x;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        TreeNode node = (TreeNode) o;
+        return val == node.val;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(val);
     }
 
     @Override
