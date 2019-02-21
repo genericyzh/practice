@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="customEditorConfigurer" class="org.springframework.beans.factory.config.CustomEditorConfigurer">
+        <property name="propertyEditorRegistrars">
+            <list>
+                <ref bean="myPropertyEditorRegistrar"/>
+            </list>
+        </property>
+    </bean>
+
+    <bean id="circle" class="com.ordinaryyzh.domain.Circle">
+        <property name="point" value="1;2"/>
+    </bean>
+
+    <bean id="myPropertyEditorRegistrar" class="com.ordinaryyzh.propertyeditor.MyPropertyEditorRegistrar"></bean>
+
+
+</beans>
