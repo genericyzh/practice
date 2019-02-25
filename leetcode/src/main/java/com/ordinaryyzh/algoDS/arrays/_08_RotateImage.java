@@ -11,7 +11,7 @@ package com.ordinaryyzh.algoDS.arrays;
  * 7  8  9                 9  8  3　　        　　　 9  6  3
  * 即从最外层开始循环，一直到最内层
  *
- * @author genericyzh
+ * @author OrdinaryYZH
  * @date 2017/7/1 23:20
  */
 public class _08_RotateImage {

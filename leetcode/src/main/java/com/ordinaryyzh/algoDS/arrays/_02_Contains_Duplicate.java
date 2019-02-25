@@ -8,7 +8,7 @@ import java.util.Set;
  * https://leetcode.com/problems/contains-duplicate
  * 给出一个数组，判断是否有重复元素
  *
- * @author genericyzh
+ * @author OrdinaryYZH
  * @date 2017/6/21 23:32
  */
 public class _02_Contains_Duplicate {

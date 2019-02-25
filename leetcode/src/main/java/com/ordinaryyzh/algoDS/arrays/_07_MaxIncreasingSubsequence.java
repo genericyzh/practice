@@ -17,7 +17,7 @@ package com.ordinaryyzh.algoDS.arrays;
  * (1) if x is larger than all tails, append it, increase the size by 1
  * (2) if tails[i-1] < x <= tails[i], update tails[i]
  *
- * @author genericyzh
+ * @author OrdinaryYZH
  * @date 2017/6/27 23:39
  */
 public class _07_MaxIncreasingSubsequence {

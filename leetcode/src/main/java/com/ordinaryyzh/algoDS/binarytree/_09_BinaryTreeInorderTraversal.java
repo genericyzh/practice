@@ -8,7 +8,7 @@ import java.util.Stack;
  * https://leetcode.com/problems/binary-tree-inorder-traversal/description/
  * 给出一个二叉树，返回中序遍历数组，不包括null
  *
- * @author genericyzh
+ * @author OrdinaryYZH
  * @date 2017/9/5 22:37
  */
 public class _09_BinaryTreeInorderTraversal {

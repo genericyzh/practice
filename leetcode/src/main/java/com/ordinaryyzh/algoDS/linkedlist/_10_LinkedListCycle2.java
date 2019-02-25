@@ -6,7 +6,7 @@ package com.ordinaryyzh.algoDS.linkedlist;
  * <p>
  * 参考：http://bookshadow.com/weblog/2015/07/10/leetcode-linked-list-cycle-ii/
  *
- * @author genericyzh
+ * @author OrdinaryYZH
  * @date 2017/8/20 18:42 2017/10/27
  */
 public class _10_LinkedListCycle2 {

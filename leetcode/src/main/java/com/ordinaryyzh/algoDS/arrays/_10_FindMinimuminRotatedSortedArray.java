@@ -4,7 +4,7 @@ package com.ordinaryyzh.algoDS.arrays;
  * https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/#/description
  * 假设一个排好序的数组在某处执行了一次“旋转”，找出最小的元素（数组元素不重复）
  *
- * @author genericyzh
+ * @author OrdinaryYZH
  * @date 2017/7/10 22:20
  */
 public class _10_FindMinimuminRotatedSortedArray {

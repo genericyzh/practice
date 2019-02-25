@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * @author genericyzh
+ * @author OrdinaryYZH
  * @date 2018/6/24 21:24
  */
 public abstract class Cluster {

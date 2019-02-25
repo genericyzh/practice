@@ -19,7 +19,7 @@ package com.ordinaryyzh.leetcode.string;
  * So once we see all zeros in the map, meaning equal numbers of every characters between s1 and the substring in the sliding window,
  * we know the answer is true.
  *
- * @author genericyzh
+ * @author OrdinaryYZH
  * @date 2017/10/22 23:27
  */
 public class _13_PermutationInString {

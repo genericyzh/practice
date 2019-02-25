@@ -5,7 +5,7 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
 /**
- * @author genericyzh
+ * @author OrdinaryYZH
  * @date 2018/7/9 22:00
  */
 public class ExchangerTest {

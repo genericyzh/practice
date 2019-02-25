@@ -9,7 +9,7 @@ package com.ordinaryyzh.algoDS.arrays;
  * 3、快速选择算法
  * 参考题解：https://leetcode.com/problems/kth-largest-element-in-an-array/#/solutions 第三种方法看不懂...
  *
- * @author genericyzh
+ * @author OrdinaryYZH
  * @date 2017/6/25 23:09
  */
 public class _05_KthLargestElementinanArray {

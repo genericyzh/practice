@@ -8,7 +8,7 @@ import java.util.List;
  * 题意：把一个集合的单词按照每行maxWidth个字符放，每行要两端对齐，如果空格不能均匀分布在所有间隔中，
  * 那么左边的空格要多于右边的空格，最后一行靠左对齐，空格补全。
  *
- * @author genericyzh
+ * @author OrdinaryYZH
  * @date 2017/10/12 23:32
  */
 public class _06_TextJustification {

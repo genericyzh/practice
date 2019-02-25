@@ -3,7 +3,7 @@ package com.ordinaryyzh.javase.exception;
 import java.io.IOException;
 
 /**
- * @author genericyzh
+ * @author OrdinaryYZH
  * @date 2018/3/22 14:07
  */
 public class Test {

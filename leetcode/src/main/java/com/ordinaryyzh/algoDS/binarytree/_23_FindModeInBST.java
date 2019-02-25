@@ -11,7 +11,7 @@ import java.util.stream.Collectors;
  * 求：出现次数最多的数字，可能有多个，返回数组
  * （最好能够不使用多余的存储空间）
  *
- * @author genericyzh
+ * @author OrdinaryYZH
  * @date 2017/9/19 22:14
  */
 public class _23_FindModeInBST {

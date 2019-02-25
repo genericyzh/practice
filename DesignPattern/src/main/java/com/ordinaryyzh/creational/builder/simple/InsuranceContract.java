@@ -1,7 +1,7 @@
 package com.ordinaryyzh.creational.builder.simple;
 
 /**
- * @author genericyzh
+ * @author OrdinaryYZH
  * @date 2018/12/13 23:28
  */
 public class InsuranceContract {

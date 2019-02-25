@@ -1,7 +1,7 @@
 package com.ordinaryyzh;
 
 /**
- * @author genericyzh
+ * @author OrdinaryYZH
  * @date 2018/3/18 22:26
  */
 public class Dichotomy {

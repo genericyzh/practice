@@ -10,7 +10,7 @@ import java.util.stream.Collectors;
  * 给出一个二叉树，求子树的和中，出现最多的和次数最多的是哪些
  * 跟_23_FindModeinBST差不多的做法，有n各节点 -> 有n个子树，后序遍历 + hashmap
  *
- * @author genericyzh
+ * @author OrdinaryYZH
  * @date 2017/9/20 23:26
  */
 public class _24_MostFrequentSubtreeSum {

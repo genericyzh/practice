@@ -8,7 +8,7 @@ import java.util.Arrays;
  * 将一个数组向右移动k位
  * For example, with n = 7 and k = 3, the array [1,2,3,4,5,6,7] is rotated to [5,6,7,1,2,3,4].
  *
- * @author genericyzh
+ * @author OrdinaryYZH
  * @date 2017/5/1 23:40
  */
 public class _01_RotateArray {

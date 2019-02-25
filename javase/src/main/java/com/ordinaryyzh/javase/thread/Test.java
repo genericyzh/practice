@@ -1,7 +1,7 @@
 package com.ordinaryyzh.javase.thread;
 
 /**
- * @author genericyzh
+ * @author OrdinaryYZH
  * @date 2018/3/22 23:45
  */
 

@@ -5,7 +5,7 @@ import java.util.NoSuchElementException;
 /**
  * 双向链表
  *
- * @author genericyzh
+ * @author OrdinaryYZH
  * @date 2017/7/20 21:41
  */
 public class _02_DoublyLinkedList<E> {

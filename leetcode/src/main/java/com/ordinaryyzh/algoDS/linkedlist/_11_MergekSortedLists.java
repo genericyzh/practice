@@ -21,7 +21,7 @@ package com.ordinaryyzh.algoDS.linkedlist;
  * 1、归并排序哦的复杂度计算
  * 2、合并操作的两种：递归、非递归实现
  *
- * @author genericyzh
+ * @author OrdinaryYZH
  * @date 2017/8/24 0:00 2017/10/28 2017/11/08
  */
 public class _11_MergekSortedLists {

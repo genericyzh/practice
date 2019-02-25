@@ -1,7 +1,7 @@
 package com.ordinaryyzh.algoDS.algo.sortingandsearching;
 
 /**
- * @author genericyzh
+ * @author OrdinaryYZH
  * @date 2017/10/1 23:50
  */
 public class _06_QuickSort {

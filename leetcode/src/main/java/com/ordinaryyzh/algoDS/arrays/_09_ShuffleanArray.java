@@ -24,7 +24,7 @@ import java.util.Random;
  * ...
  * 最后i=n-1，任意j在数组中的位置都为 1/i
  *
- * @author genericyzh
+ * @author OrdinaryYZH
  * @date 2017/7/3 23:50
  */
 public class _09_ShuffleanArray {

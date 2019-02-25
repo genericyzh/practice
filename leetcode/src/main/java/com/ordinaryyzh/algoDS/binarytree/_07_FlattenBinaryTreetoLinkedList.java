@@ -4,7 +4,7 @@ package com.ordinaryyzh.algoDS.binarytree;
  * https://leetcode.com/problems/flatten-binary-tree-to-linked-list/description/
  * 给出一个二叉树，转换成另一种形式的树，变成一个先序遍历的"右叉树"
  *
- * @author genericyzh
+ * @author OrdinaryYZH
  * @date 2017/9/3 22:07
  */
 public class _07_FlattenBinaryTreetoLinkedList {

@@ -11,7 +11,7 @@ package com.ordinaryyzh.algoDS.binarytree;
  * <p>
  * 这题的难点在于如何找到链表的中间节点，我们可以通过fast，slow指针来解决，fast每次走两步，slow每次走一步，fast走到结尾，那么slow就是中间节点了。
  *
- * @author genericyzh
+ * @author OrdinaryYZH
  * @date 2017/9/10 23:39
  */
 public class _14_ConvertSortedListtoBinarySearchTree {

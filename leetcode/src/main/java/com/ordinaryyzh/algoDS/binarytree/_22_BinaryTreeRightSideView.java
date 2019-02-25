@@ -6,7 +6,7 @@ import java.util.*;
  * https://leetcode.com/problems/binary-tree-right-side-view/description/
  * 给出一个搜索树，输出你在右边看到的节点，从上到下输出
  *
- * @author genericyzh
+ * @author OrdinaryYZH
  * @date 2017/9/18 22:17
  */
 public class _22_BinaryTreeRightSideView {

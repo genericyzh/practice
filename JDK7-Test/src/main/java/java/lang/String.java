@@ -1,7 +1,7 @@
 package java.lang;
 
 /**
- * @author genericyzh
+ * @author OrdinaryYZH
  * @date 2018/9/22 14:37
  */
 public class String {

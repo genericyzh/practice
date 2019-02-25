@@ -1,7 +1,7 @@
 package com.ordinaryyzh.algoDS;
 
 /**
- * @author genericyzh
+ * @author OrdinaryYZH
  * @date 2018/3/29 16:40
  */
 public class Test {

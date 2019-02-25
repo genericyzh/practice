@@ -4,7 +4,7 @@ package com.ordinaryyzh.leetcode.string;
  * https://leetcode.com/problems/implement-strstr/description/
  * 在一个字符串中找子串，如果有就返回原字符串下标，否则返回-1
  *
- * @author genericyzh
+ * @author OrdinaryYZH
  * @date 2017/10/16 21:28
  */
 public class _08_ImplementStrStr {

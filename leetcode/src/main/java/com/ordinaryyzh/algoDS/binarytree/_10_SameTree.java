@@ -4,7 +4,7 @@ package com.ordinaryyzh.algoDS.binarytree;
  * https://leetcode.com/problems/same-tree/description/
  * 给出两颗二叉树，判断是否一样
  *
- * @author genericyzh
+ * @author OrdinaryYZH
  * @date 2017/9/6 22:28
  */
 public class _10_SameTree {

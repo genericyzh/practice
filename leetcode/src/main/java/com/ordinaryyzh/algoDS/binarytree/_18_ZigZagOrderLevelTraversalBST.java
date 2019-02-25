@@ -18,7 +18,7 @@ import java.util.*;
  * ]
  * 明显是广搜即可，这道题要求的是蛇形遍历，我们可以发现奇数行的遍历仍然可以按照广度优先遍历的方式实现，而对于偶数行，只要翻转一下就好了
  *
- * @author genericyzh
+ * @author OrdinaryYZH
  * @date 2017/9/15 0:02
  */
 public class _18_ZigZagOrderLevelTraversalBST {

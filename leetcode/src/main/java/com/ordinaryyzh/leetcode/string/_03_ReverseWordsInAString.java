@@ -8,7 +8,7 @@ import java.util.List;
  * https://leetcode.com/problems/reverse-words-in-a-string/description/
  * 将一串句子中的单词反转
  *
- * @author genericyzh
+ * @author OrdinaryYZH
  * @date 2017/10/9 23:22
  */
 public class _03_ReverseWordsInAString {

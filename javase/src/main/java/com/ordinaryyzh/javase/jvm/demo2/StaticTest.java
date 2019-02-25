@@ -1,7 +1,7 @@
 package com.ordinaryyzh.javase.jvm.demo2;
 
 /**
- * @author genericyzh
+ * @author OrdinaryYZH
  * @date 2018/3/19 17:55
  * 参考：http://blog.csdn.net/u013256816/article/details/50837863
  */

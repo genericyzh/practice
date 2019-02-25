@@ -6,7 +6,7 @@ package com.ordinaryyzh.leetcode.string;
  * 参考:https://leetcode.com/problems/zigzag-conversion/discuss/
  * 这道题如果再难一点的话，就是要求返回String[]，难点就在于把空格也输出
  *
- * @author genericyzh
+ * @author OrdinaryYZH
  * @date 2017/10/14 23:38
  */
 public class _07_ZigZagConversion {

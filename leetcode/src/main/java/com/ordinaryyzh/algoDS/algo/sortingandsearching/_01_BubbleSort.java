@@ -1,7 +1,7 @@
 package com.ordinaryyzh.algoDS.algo.sortingandsearching;
 
 /**
- * @author genericyzh
+ * @author OrdinaryYZH
  *         冒泡排序：每次循环能让最大的数排到最后（在这个过程中大数总是往右靠），最多要经过length此循环，即可得到升序数组
  *         优化点，如果某一次遍历中没有发现可交换的数据，那么就已经是排好序了
  * @date 2017/9/25 23:23

@@ -4,7 +4,7 @@ package com.ordinaryyzh.leetcode.string;
  * https://leetcode.com/problems/reverse-words-in-a-string-ii
  * 跟上一题题意一样，区别是参数变成了char[] ，并且不能使用额外的空间
  *
- * @author genericyzh
+ * @author OrdinaryYZH
  * @date 2017/10/10 22:59
  */
 public class _04_ReverseWordsII {

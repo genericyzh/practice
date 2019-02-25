@@ -4,7 +4,7 @@ package com.ordinaryyzh.algoDS.binarytree;
  * https://leetcode.com/problems/minimum-depth-of-binary-tree/description/
  * 给出一个二叉树，返回最浅的深度(跟叶子节点最接近的距离)
  *
- * @author genericyzh
+ * @author OrdinaryYZH
  * @date 2017/9/8 23:27
  */
 public class _13_MinimumDepthofBinaryTree {

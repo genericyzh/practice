@@ -4,7 +4,7 @@ package com.ordinaryyzh.algoDS.binarytree;
  * https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/description/
  * 题意：求二叉树 LCA
  *
- * @author genericyzh
+ * @author OrdinaryYZH
  * @date 2018/3/1 10:46
  */
 public class _28_LowestCommonAncestorofaBinaryTree {

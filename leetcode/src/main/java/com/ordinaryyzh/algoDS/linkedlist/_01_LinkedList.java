@@ -5,7 +5,7 @@ import java.util.NoSuchElementException;
 /**
  * 实现单向链表
  *
- * @author genericyzh
+ * @author OrdinaryYZH
  * @date 2017/7/18 21:43
  */
 public class _01_LinkedList<E> {

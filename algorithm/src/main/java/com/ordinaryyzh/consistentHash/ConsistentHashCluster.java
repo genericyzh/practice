@@ -10,7 +10,7 @@ import java.util.TreeMap;
 import java.util.stream.IntStream;
 
 /**
- * @author genericyzh
+ * @author OrdinaryYZH
  * @date 2018/6/24 21:24
  */
 public class ConsistentHashCluster extends Cluster {

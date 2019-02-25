@@ -1,7 +1,7 @@
 package com.ordinaryyzh.creational;
 
 /**
- * @author genericyzh
+ * @author OrdinaryYZH
  * @date 2018/3/16 17:29
  */
 public class Singleton3 {

@@ -4,7 +4,7 @@ package com.ordinaryyzh.algoDS.linkedlist;
  * https://leetcode.com/problems/remove-nth-node-from-end-of-list/description/
  * 给出一个单向链表，删除倒数第n个元素，并返回头结点
  *
- * @author genericyzh
+ * @author OrdinaryYZH
  * @date 2017/8/9 23:45
  */
 public class _08_RemoveNthNodeFromEndofList {

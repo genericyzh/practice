@@ -3,7 +3,7 @@ package com.ordinaryyzh.javase.thread.books.sevenweek.day1._02Counting;
 import com.ordinaryyzh.javase.annotations.NotThreadSafe;
 
 /**
- * @author genericyzh
+ * @author OrdinaryYZH
  * @date 2018/6/27 15:41
  */
 @NotThreadSafe

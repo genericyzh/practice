@@ -7,7 +7,7 @@ import java.util.Queue;
  * https://leetcode.com/problems/invert-binary-tree/description/
  * 翻转二叉树
  *
- * @author genericyzh
+ * @author OrdinaryYZH
  * @date 2017/8/30 23:31
  */
 public class _03_InvertBinaryTree {

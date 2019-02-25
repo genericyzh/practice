@@ -11,7 +11,7 @@ import java.util.stream.Collectors;
  * https://leetcode.com/problems/serialize-and-deserialize-binary-tree/description/
  * 二叉树的序列化、反序列化
  *
- * @author genericyzh
+ * @author OrdinaryYZH
  * @date 2017/9/23 23:26
  */
 public class _27_SerializeAndDeserializeBT {

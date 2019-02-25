@@ -5,7 +5,7 @@ package com.ordinaryyzh.algoDS.arrays;
  * 题目：给定一个左右相邻不相等的数组，找出一个局部最大值。PS：num[-1]=num[n]=-∞
  * 可以理解为多个山峰的一个数组,找出一个山峰；可以跟一个向左/右移动的排序数组作为对比题目
  *
- * @author genericyzh
+ * @author OrdinaryYZH
  * @date 2017/6/22 23:06
  */
 public class _03_Find_Peak_Element {

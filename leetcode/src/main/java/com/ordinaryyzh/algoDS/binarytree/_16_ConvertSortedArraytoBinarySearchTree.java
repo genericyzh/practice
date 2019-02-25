@@ -6,7 +6,7 @@ package com.ordinaryyzh.algoDS.binarytree;
  * 注意边界，当nums长度为2时，l = m = 0，下次的l = 0，r = -1(m-1)，所以终止条件为:l > r -> return null
  * 当nums.length = 3时，第二次递归，左节点：l = r = 0，右节点：l = r = 2,所以l > r -> return null没问题
  *
- * @author genericyzh
+ * @author OrdinaryYZH
  * @date 2017/9/12 22:55
  */
 public class _16_ConvertSortedArraytoBinarySearchTree {

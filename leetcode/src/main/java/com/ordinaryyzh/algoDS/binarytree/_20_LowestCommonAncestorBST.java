@@ -4,7 +4,7 @@ package com.ordinaryyzh.algoDS.binarytree;
  * https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/description/
  * 求搜索树的两个节点的最小公共祖先（ lowest common ancestor (LCA)）
  *
- * @author genericyzh
+ * @author OrdinaryYZH
  * @date 2017/9/17 23:30
  */
 public class _20_LowestCommonAncestorBST {

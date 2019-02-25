@@ -11,7 +11,7 @@ import java.util.Deque;
  * <p>
  * 那么反序列化，子树的根节点都是第一个节点，可以利用队列递归实现
  *
- * @author genericyzh
+ * @author OrdinaryYZH
  * @date 2017/9/22 23:49
  */
 public class _26_SerializeAndDeserializeBST {

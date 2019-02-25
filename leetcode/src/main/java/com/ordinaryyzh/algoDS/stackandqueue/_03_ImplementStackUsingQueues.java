@@ -9,7 +9,7 @@ import java.util.Queue;
  * push：也要确定是哪个队列
  * 这种做法比较麻烦
  *
- * @author genericyzh
+ * @author OrdinaryYZH
  * @date 2017/10/5 23:26
  */
 public class _03_ImplementStackUsingQueues {

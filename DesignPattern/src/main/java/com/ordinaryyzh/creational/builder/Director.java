@@ -1,7 +1,7 @@
 package com.ordinaryyzh.creational.builder;
 
 /**
- * @author genericyzh
+ * @author OrdinaryYZH
  * @date 2018/12/13 23:24
  * 指导者，指导使用生成器的接口来构建产品的对象
  */

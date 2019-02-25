@@ -9,7 +9,7 @@ package com.ordinaryyzh.algoDS.linkedlist;
  * ****************** ↗
  * B:     b1 → b2 → b3
  *
- * @author genericyzh
+ * @author OrdinaryYZH
  * @date 2017/8/7 0:19
  */
 public class _06_IntersectionofTwoLinkedLists {

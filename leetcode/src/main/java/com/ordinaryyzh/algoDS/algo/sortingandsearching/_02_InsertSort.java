@@ -7,7 +7,7 @@ package com.ordinaryyzh.algoDS.algo.sortingandsearching;
  * <p>
  * https://www.kancloud.cn/kancloud/data-structure-and-algorithm-notes/72913
  *
- * @author genericyzh
+ * @author OrdinaryYZH
  * @date 2017/9/26 23:43
  */
 public class _02_InsertSort {

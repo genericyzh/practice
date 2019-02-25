@@ -5,7 +5,7 @@ package com.ordinaryyzh.algoDS.linkedlist;
  * 给一个单向链表，判断是否是回文，最好是O(n) time and O(1) space
  * 思路：先得到链表长度，再利用递归的特性:栈中存head的next，全局存rightNode，从中间向两边判断
  *
- * @author genericyzh
+ * @author OrdinaryYZH
  * @date 2017/8/1 22:46
  */
 public class _04_PalindromeLinkedList {

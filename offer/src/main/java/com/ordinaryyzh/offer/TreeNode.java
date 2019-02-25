@@ -6,7 +6,7 @@ import java.util.Deque;
 /**
  * TreeNode类包含构造树的方法
  *
- * @author genericyzh
+ * @author OrdinaryYZH
  * @date 2017/9/6 23:37
  */
 public class TreeNode {

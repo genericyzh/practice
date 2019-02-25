@@ -4,7 +4,7 @@ package com.ordinaryyzh.algoDS.linkedlist;
  * https://leetcode.com/problems/reverse-linked-list/description/
  * 将一个单向链表翻转，2种做法：1、非递归 2、递归
  *
- * @author genericyzh
+ * @author OrdinaryYZH
  * @date 2017/8/2 23:06
  */
 public class _05_ReverseLinkedList {

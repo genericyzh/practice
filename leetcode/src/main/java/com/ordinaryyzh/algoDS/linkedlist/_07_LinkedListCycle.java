@@ -13,7 +13,7 @@ package com.ordinaryyzh.algoDS.linkedlist;
  * 在有环的情况下，最终快慢指针一定都走在环内，加入第i次遍历时快指针还需要k步才能追上慢指针，由于快指针比慢指针每次多走一步。
  * 那么每遍历一次快慢指针间的间距都会减少1，直至最终相遇。故快慢指针相遇一定能确定该链表有环。
  *
- * @author genericyzh
+ * @author OrdinaryYZH
  * @date 2017/8/8 23:49
  */
 public class _07_LinkedListCycle {

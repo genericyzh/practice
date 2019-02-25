@@ -4,7 +4,7 @@ package com.ordinaryyzh.leetcode.string;
  * https://leetcode.com/problems/repeated-substring-pattern/description/
  * 给出一个字符串，判断其是否能够由子串组成
  *
- * @author genericyzh
+ * @author OrdinaryYZH
  * @date 2017/10/8 23:14
  */
 public class _02_RepeatedSubstringPattern {

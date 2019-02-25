@@ -5,7 +5,7 @@ import java.util.Stack;
 /**
  * https://leetcode.com/problems/implement-stack-using-queues
  *
- * @author genericyzh
+ * @author OrdinaryYZH
  * @date 2017/10/6 23:29
  */
 public class _04_ImplementQueueusingStacks {

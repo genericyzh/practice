@@ -4,7 +4,7 @@ package com.ordinaryyzh.algoDS.algo.sortingandsearching;
  * 归并排序
  * 可参考：https://www.kancloud.cn/kancloud/data-structure-and-algorithm-notes/72914
  *
- * @author genericyzh
+ * @author OrdinaryYZH
  * @date 2017/9/30 22:24
  */
 public class _05_MergeSort {

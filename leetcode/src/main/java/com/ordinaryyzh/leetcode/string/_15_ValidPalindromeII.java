@@ -4,7 +4,7 @@ package com.ordinaryyzh.leetcode.string;
  * https://leetcode.com/problems/valid-palindrome-ii/description/
  * 题意：判断字符串是否回文串，最多能够删除一个字符串
  *
- * @author genericyzh
+ * @author OrdinaryYZH
  * @date 2018/3/30 11:07
  */
 public class _15_ValidPalindromeII {

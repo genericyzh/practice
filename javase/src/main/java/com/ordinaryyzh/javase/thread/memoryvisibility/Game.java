@@ -1,7 +1,7 @@
 package com.ordinaryyzh.javase.thread.memoryvisibility;
 
 /**
- * @author genericyzh
+ * @author OrdinaryYZH
  * @date 2018/6/27 12:24
  */
 public class Game {

@@ -5,7 +5,7 @@ import org.junit.Assert;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 /**
- * @author genericyzh
+ * @author OrdinaryYZH
  * @date 2018/11/6 17:08
  */
 public class Test {

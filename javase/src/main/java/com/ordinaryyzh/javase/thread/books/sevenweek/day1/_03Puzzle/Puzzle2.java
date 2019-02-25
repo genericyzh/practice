@@ -1,7 +1,7 @@
 package com.ordinaryyzh.javase.thread.books.sevenweek.day1._03Puzzle;
 
 /**
- * @author genericyzh
+ * @author OrdinaryYZH
  * @date 2018/6/27 0:55
  */
 public class Puzzle2 {

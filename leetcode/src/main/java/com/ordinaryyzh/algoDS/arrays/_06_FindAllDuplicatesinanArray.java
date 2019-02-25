@@ -8,7 +8,7 @@ import java.util.List;
  * 给出一个数组: 1 ≤ a[i] ≤ n (n = size of array), some elements appear twice and others appear once. // 有些出现2次，有些出现1次
  * Find all the elements that appear twice in this array. // 找出出现2次的数字
  *
- * @author genericyzh
+ * @author OrdinaryYZH
  * @date 2017/6/26 23:39
  */
 public class _06_FindAllDuplicatesinanArray {

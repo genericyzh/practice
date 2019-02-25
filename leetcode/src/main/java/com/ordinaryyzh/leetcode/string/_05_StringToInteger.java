@@ -4,7 +4,7 @@ package com.ordinaryyzh.leetcode.string;
  * https://leetcode.com/problems/string-to-integer-atoi/description/
  * 将string转换为int
  *
- * @author genericyzh
+ * @author OrdinaryYZH
  * @date 2017/10/11 23:33
  */
 public class _05_StringToInteger {

@@ -3,7 +3,7 @@ package com.ordinaryyzh.offer.chapter4;
 import com.ordinaryyzh.offer.TreeNode;
 
 /**
- * @author genericyzh
+ * @author OrdinaryYZH
  * @date 2018/2/23 23:46
  */
 public class _19_BinaryTreeMirror {

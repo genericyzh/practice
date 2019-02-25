@@ -4,7 +4,7 @@ package com.ordinaryyzh.leetcode.string;
  * https://leetcode.com/problems/first-unique-character-in-a-string/description/
  * 给出一个只有小写字母的字符串，返回第一个没有重复的字母的下标
  *
- * @author genericyzh
+ * @author OrdinaryYZH
  * @date 2017/10/7 21:38
  */
 public class _01_FirstUniqueCharacterInAString {

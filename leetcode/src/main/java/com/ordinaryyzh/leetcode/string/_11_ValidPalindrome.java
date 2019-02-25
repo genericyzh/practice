@@ -6,7 +6,7 @@ package com.ordinaryyzh.leetcode.string;
  * "A man, a plan, a canal: Panama" is a palindrome.
  * "race a car" is not a palindrome.
  *
- * @author genericyzh
+ * @author OrdinaryYZH
  * @date 2017/10/19 23:04
  */
 public class _11_ValidPalindrome {

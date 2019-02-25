@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * @author genericyzh
+ * @author OrdinaryYZH
  * @date 2018/6/24 21:23
  */
 public class Node {

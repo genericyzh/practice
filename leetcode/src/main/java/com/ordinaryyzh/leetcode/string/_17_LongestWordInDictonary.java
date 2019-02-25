@@ -8,7 +8,7 @@ import java.util.List;
  * 题意：给出一个字符串s和一个字符串List，
  * 问：s能够去掉若干个字符，去掉之后能否在list中找到，如果存在多个，则返回最长字符串，如果长度相等，返回升序排序的第一个字符串
  *
- * @author genericyzh
+ * @author OrdinaryYZH
  * @date 2018/4/12 16:13
  */
 public class _17_LongestWordInDictonary {

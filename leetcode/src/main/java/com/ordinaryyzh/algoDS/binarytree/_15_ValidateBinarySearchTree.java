@@ -5,7 +5,7 @@ package com.ordinaryyzh.algoDS.binarytree;
  * 给出一个二叉树，判断是否是搜索树
  * 要注意不能只比较父的两个子节点，子节点是否还符合跟上层都有关系
  *
- * @author genericyzh
+ * @author OrdinaryYZH
  * @date 2017/9/11 22:59
  */
 public class _15_ValidateBinarySearchTree {

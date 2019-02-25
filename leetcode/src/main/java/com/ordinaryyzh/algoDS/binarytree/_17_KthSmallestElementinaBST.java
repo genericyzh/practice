@@ -8,7 +8,7 @@ import java.util.Deque;
  * 给出一个二叉搜索树，找出kth smallest节点（如果BST经常被修改(插入/删除操作),你需要找到k最小频繁吗?你会如何优化kthSmallest常规?）
  * 由二叉搜索树的定义跟题目所求值，可以很容易的得出中序遍历即可
  *
- * @author genericyzh
+ * @author OrdinaryYZH
  * @date 2017/9/14 23:13
  */
 public class _17_KthSmallestElementinaBST {

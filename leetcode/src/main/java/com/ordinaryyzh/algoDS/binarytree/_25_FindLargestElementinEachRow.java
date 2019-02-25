@@ -9,7 +9,7 @@ import java.util.Queue;
  * https://leetcode.com/problems/find-largest-value-in-each-tree-row/description/
  * 给出一个二叉树，返回每一行的最大节点val
  *
- * @author genericyzh
+ * @author OrdinaryYZH
  * @date 2017/9/21 21:33
  */
 public class _25_FindLargestElementinEachRow {

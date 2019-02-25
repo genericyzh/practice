@@ -2,7 +2,7 @@ package com.ordinaryyzh.leetcode;
 
 
 /**
- * @author genericyzh
+ * @author OrdinaryYZH
  * @date 2018/3/30 10:01
  */
 public class Test {

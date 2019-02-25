@@ -8,7 +8,7 @@ import org.springframework.web.servlet.DispatcherServlet;
 import org.springframework.web.servlet.FlashMap;
 
 /**
- * @author genericyzh
+ * @author OrdinaryYZH
  * @date 2018/8/5 15:24
  */
 @Controller

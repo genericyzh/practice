@@ -3,7 +3,7 @@ package com.ordinaryyzh.algoDS.algo.sortingandsearching;
 import java.util.Arrays;
 
 /**
- * @author genericyzh
+ * @author OrdinaryYZH
  * @date 2017/10/2 1:00
  */
 public class _06_2_QuickSort {

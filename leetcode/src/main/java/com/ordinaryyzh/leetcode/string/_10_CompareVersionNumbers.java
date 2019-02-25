@@ -10,7 +10,7 @@ package com.ordinaryyzh.leetcode.string;
  * <p>
  * 点号不代表数字的小数点，用来分割数字序列。
  *
- * @author genericyzh
+ * @author OrdinaryYZH
  * @date 2017/10/18 23:12
  */
 public class _10_CompareVersionNumbers {

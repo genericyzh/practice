@@ -5,7 +5,7 @@ package com.ordinaryyzh.algoDS.arrays;
  * 一个向右移动过的升序数组，给出target，找出在数组里面的下标，如果没找到返回-1
  * 这题可以说是标准的二分法写法，值得学习
  *
- * @author genericyzh
+ * @author OrdinaryYZH
  * @date 2017/7/12 23:43
  */
 public class _11_SearchinRotatedSortedArray {

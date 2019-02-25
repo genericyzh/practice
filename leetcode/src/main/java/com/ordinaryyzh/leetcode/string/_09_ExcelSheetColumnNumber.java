@@ -10,7 +10,7 @@ package com.ordinaryyzh.leetcode.string;
  * AA -> 27
  * AB -> 28
  *
- * @author genericyzh
+ * @author OrdinaryYZH
  * @date 2017/10/17 22:26
  */
 public class _09_ExcelSheetColumnNumber {

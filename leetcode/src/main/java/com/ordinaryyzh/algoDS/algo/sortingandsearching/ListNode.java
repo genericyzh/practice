@@ -1,7 +1,7 @@
 package com.ordinaryyzh.algoDS.algo.sortingandsearching;
 
 /**
- * @author genericyzh
+ * @author OrdinaryYZH
  * @date 2017/9/10 23:41
  */
 

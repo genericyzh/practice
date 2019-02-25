@@ -1,7 +1,7 @@
 package com.ordinaryyzh.creational.builder;
 
 /**
- * @author genericyzh
+ * @author OrdinaryYZH
  * @date 2018/12/13 23:23
  * 具体的生成器实现对象
  */

@@ -5,7 +5,7 @@ import java.sql.DriverManager;
 import java.util.Enumeration;
 
 /**
- * @author genericyzh
+ * @author OrdinaryYZH
  * @date 2018/9/16 12:11
  */
 public class DriverManagerTest {

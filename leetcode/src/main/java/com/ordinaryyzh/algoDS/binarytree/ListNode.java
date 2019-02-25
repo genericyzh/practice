@@ -1,7 +1,7 @@
 package com.ordinaryyzh.algoDS.binarytree;
 
 /**
- * @author genericyzh
+ * @author OrdinaryYZH
  * @date 2017/9/10 23:41
  */
 

@@ -6,7 +6,7 @@ import java.util.*;
  * https://leetcode.com/problems/symmetric-tree/description/
  * 判断一个二叉树是不是对称
  *
- * @author genericyzh
+ * @author OrdinaryYZH
  * @date 2017/9/4 22:55
  */
 public class _08_SymmetricTree {

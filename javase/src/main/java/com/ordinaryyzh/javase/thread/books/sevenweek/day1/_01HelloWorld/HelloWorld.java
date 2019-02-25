@@ -1,7 +1,7 @@
 package com.ordinaryyzh.javase.thread.books.sevenweek.day1._01HelloWorld;
 
 /**
- * @author genericyzh
+ * @author OrdinaryYZH
  * @date 2018/6/27 13:57
  */
 public class HelloWorld {

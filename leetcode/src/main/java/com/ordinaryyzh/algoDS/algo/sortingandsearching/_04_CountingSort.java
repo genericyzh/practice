@@ -16,7 +16,7 @@ import java.util.Arrays;
  * 不用反向填充也一样，count[]--就可以了
  * 图解：https://www.cs.usfca.edu/~galles/visualization/CountingSort.html
  *
- * @author genericyzh
+ * @author OrdinaryYZH
  * @date 2017/9/29 21:00
  */
 public class _04_CountingSort {

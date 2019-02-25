@@ -10,7 +10,7 @@ import java.util.concurrent.TimeUnit;
 import static com.ordinaryyzh.javase.utils.Print.print;
 
 /**
- * @author genericyzh
+ * @author OrdinaryYZH
  * @date 2018/7/2 22:33
  */
 class SleepBlocked implements Runnable {

@@ -1,7 +1,7 @@
 package com.ordinaryyzh.javase.jvm.demo1;
 
 /**
- * @author genericyzh
+ * @author OrdinaryYZH
  * @date 2018/3/19 14:03
  */
 public class SubClass extends SuperClass

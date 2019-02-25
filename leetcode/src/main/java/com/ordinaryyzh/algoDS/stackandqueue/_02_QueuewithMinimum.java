@@ -7,7 +7,7 @@ import java.util.Queue;
  * 如果插入了一个最小值到队列中，那么出队到这个最小值之前的min都不会变
  * 如果后面有插入了比最小值大的值，那么最小值出队后，min就会变：e.g.5,4,3,2,1,2,3
  *
- * @author genericyzh
+ * @author OrdinaryYZH
  * @date 2017/10/4 23:31
  */
 public class _02_QueuewithMinimum {

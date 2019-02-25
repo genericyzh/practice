@@ -14,7 +14,7 @@ import java.util.Arrays;
  * 运行时间与输入无关
  * 数据移动最少
  *
- * @author genericyzh
+ * @author OrdinaryYZH
  * @date 2017/9/28 21:46
  */
 public class _04_SelectionSort {

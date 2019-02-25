@@ -1,7 +1,7 @@
 package com.ordinaryyzh.javase.thread.lifecycle;
 
 /**
- * @author genericyzh
+ * @author OrdinaryYZH
  * @date 2018/6/26 21:09
  */
 public class DaemonThread {

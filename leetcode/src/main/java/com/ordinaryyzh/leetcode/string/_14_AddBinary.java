@@ -4,7 +4,7 @@ package com.ordinaryyzh.leetcode.string;
  * https://leetcode.com/problems/add-binary/description/
  * 题意：给出两个二进制字符串，返回他们的和（也是字符串格式）
  *
- * @author genericyzh
+ * @author OrdinaryYZH
  * @date 2018/3/29 23:39
  */
 public class _14_AddBinary {
