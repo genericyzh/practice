@@ -72,7 +72,7 @@
         <druid.version>1.0.29</druid.version>
 
         <!-- jdbc driver -->
-        <mysql.driver.version>5.1.30</mysql.driver.version>
+        <mysql.driver.version>8.0.16</mysql.driver.version>
 
         <!-- oracle driver -->
         <oracle.driver.version>10.2.0.1.0</oracle.driver.version>
