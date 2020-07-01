@@ -78,7 +78,7 @@
         <oracle.driver.version>10.2.0.1.0</oracle.driver.version>
 
         <!-- quartz -->
-        <quartz.version>2.2.1</quartz.version>
+        <quartz.version>2.3.2</quartz.version>
 
         <!-- validator -->
         <hibernate-validator.version>5.0.3.Final</hibernate-validator.version>
